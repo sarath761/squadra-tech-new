@@ -16,8 +16,8 @@ const config: Config = {
         coral: "#C45C4D",
       },
       fontFamily: {
-        display: ["Plus Jakarta Sans", "sans-serif"],
-        serif: ["Instrument Serif", "serif"],
+        display: ["var(--font-display)", "sans-serif"],
+        serif: ["var(--font-serif)", "serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       borderRadius: {

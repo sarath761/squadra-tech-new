@@ -32,7 +32,7 @@ export default function AnimateOnScroll({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={selectedVariant}
-      transition={{ delay, duration, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ delay, duration, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
       className={className}
     >
       {children}
