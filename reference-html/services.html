@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Services | Squadra Tech</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2a4a7e",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#14181e",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+    <!-- Navigation -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <img src="assets/squadra-media.png" alt="Squadra Tech Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Squadra Tech</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-medium text-primary font-semibold transition-colors"
+                        href="services.html">Services</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="case-studies.html">Case
+                        Studies</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="what-we-do.html">What We
+                        Do</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+                </nav>
+                <div>
+                    <a href="contact.html"
+                        class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-all">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 overflow-hidden bg-slate-950">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                <div
+                    class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/30 blur-[120px] animate-blob mix-blend-screen">
+                </div>
+                <div
+                    class="absolute top-[20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-500/20 blur-[120px] animate-blob animation-delay-2000 mix-blend-screen">
+                </div>
+                <div
+                    class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] rounded-full bg-blue-500/20 blur-[120px] animate-blob animation-delay-4000 mix-blend-screen">
+                </div>
+            </div>
+            <div class="absolute inset-0 opacity-20" data-alt="Dark abstract digital network connection background"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDs3vOdl_FciUnvyprBcSEeIMHxl9j2vybsoX1eG1AYS0BDnu8U6JpMBoG6pj_FfqYRNQDGD7bEatK3gX1-glzldl9wRjC42Fj5m51Vfo-JZfW2Cqq6rf0EpVL_hn3H7WmRaGOncwTHnD3WyU42PgEXqBW6iKdcX3KAYXpxTTbQIrkb5zP_FIYPyMrkZ-GopqT-17PGyRz_Pj7d7hNESY0tWg3v7mEQH_BBl7bV80BQuYcYuK-WHL0lV-JX8Hhb46xt02RGNRvICBU"); background-size: cover; background-position: center;'>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/50 to-background-dark">
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full">Expertise</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">Our Services</h1>
+                <p class="max-w-2xl mx-auto text-lg text-slate-400 leading-relaxed">
+                    Tailored technology solutions to empower your business growth and digital transformation. We bridge
+                    the gap between vision and execution.
+                </p>
+            </div>
+        </section>
+        <!-- Services Content -->
+        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- 1. E-Commerce -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">E-Commerce</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Custom storefronts and seamless shopping experiences optimized for conversion. We build
+                            high-performance retail platforms that handle scale and provide intuitive user journeys from
+                            landing to checkout.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Shopify</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Magento</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">WooCommerce</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. Mobile Development -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">smartphone</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">Mobile Development</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Native and cross-platform mobile apps built with performance and UX in mind. Our mobile
+                            solutions are designed to engage users across iOS and Android with fluid animations and
+                            robust offline capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Flutter</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">React
+                                Native</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Swift</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3. Platform Engineering -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">layers</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">Platform Engineering</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Scalable infrastructure and architecture design for modern enterprise applications. We
+                            create developer-centric platforms that automate delivery and ensure operational excellence.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Kubernetes</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Docker</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4. CRM Solutions -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">groups</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">CRM Solutions</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Streamline your sales and customer relations with integrated management systems. We
+                            implement and customize CRM platforms that provide a 360-degree view of your customer
+                            lifecycle.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Salesforce</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Hubspot</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Zoho</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5. LMS Platforms -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">LMS Platforms</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Next-generation learning management systems for corporate training and educational
+                            institutions. We develop engaging, interactive platforms with deep tracking and analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Moodle</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Canvas</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Custom
+                                LMS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6. Cloud & DevOps -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">cloud_done</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">Cloud &amp; DevOps</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Accelerate deployment cycles with robust cloud infrastructure and automation. We help
+                            organizations migrate to the cloud and adopt CI/CD pipelines that ensure stability and
+                            speed.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">AWS</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Azure</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Google
+                                Cloud</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7. Data Analytics -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">query_stats</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">Data Analytics</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Unlock actionable insights through advanced data processing and visualization. We turn raw
+                            data into strategic assets that drive decision-making and operational improvements.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Python</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PowerBI</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 8. Cybersecurity -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">security</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">Cybersecurity</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Comprehensive security audits and implementation to protect your digital assets. We provide
+                            end-to-end protection from threat detection to incident response and compliance management.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Pen-Testing</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">IAM</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">SOC</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 9. Managed Services -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">support_agent</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">Managed Services</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Proactive monitoring and maintenance to keep your operations running smoothly 24/7. Our
+                            dedicated support teams ensure your systems are always patched, secure, and performant.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">24/7
+                                Support</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">IT
+                                Strategy</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 10. System Integrations -->
+                <div
+                    class="flex flex-col md:flex-row gap-6 p-8 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl">hub</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-xl font-bold">System Integrations</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Connecting disparate systems for unified data flow and operational efficiency. We specialize
+                            in complex middleware solutions that bridge legacy systems with modern SaaS applications.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">REST
+                                APIs</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">GraphQL</span>
+                            <span
+                                class="px-2 py-1 text-[10px] font-bold uppercase rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Middleware</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="bg-primary py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">Have a project in mind?</h2>
+                <p class="text-xl text-white/80 mb-10">Let's talk about how we can help you achieve your goals.</p>
+                <button
+                    class="bg-white text-primary hover:bg-slate-100 px-8 py-4 rounded-xl text-lg font-bold transition-all inline-flex items-center gap-2 group">
+                    Let's talk
+                    <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 text-white mb-6">
+                        <img src="assets/squadra-media.png" alt="Squadra Tech Logo" class="h-8 w-auto">
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Excellence in digital transformation. Building the future of enterprise technology with
+                        precision and innovation.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Web Development</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Mobile Solutions</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Cloud
+                                Infrastructure</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="case-studies.html">Case Studies</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+                            <a href="mailto:info@squadramedia.com">info@squadramedia.com</a></li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span>
+                            +91 63667 26494</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-xs">location_on</span> Bengaluru, Karnataka</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>© 2025 Squadra Tech. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white" href=

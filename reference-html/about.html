@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Squadra Tech</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2a4a7e",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#14181e",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="text-primary">
+                    <img src="assets/squadra-media.png" alt="Squadra Tech Logo" class="h-8 w-auto">
+                </div>
+                <h2 class="text-xl font-extrabold tracking-tight">Squadra Tech</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="services.html">Services</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="case-studies.html">Case
+                    Studies</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="what-we-do.html">What We
+                    Do</a>
+                <a class="text-sm font-semibold text-primary" href="about.html">About</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+                <a class="bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 px-6 rounded-xl transition-all shadow-lg shadow-primary/20"
+                    href="contact.html">
+                    Get Started</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Section 1: Who We Are -->
+        <section class="relative overflow-hidden py-20 px-6">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                <div
+                    class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/30 blur-[120px] animate-blob mix-blend-screen">
+                </div>
+                <div
+                    class="absolute top-[20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-indigo-500/20 blur-[120px] animate-blob animation-delay-2000 mix-blend-screen">
+                </div>
+                <div
+                    class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] rounded-full bg-blue-500/20 blur-[120px] animate-blob animation-delay-4000 mix-blend-screen">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div
+                        class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase">
+                        Our Legacy</div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Bridging Technology &amp; Business
+                        Outcomes</h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Squadra Tech is a powerhouse of innovation, dedicated to delivering enterprise-grade solutions.
+                        Our journey began with a vision to bridge the gap between complex technology and tangible
+                        business outcomes.
+                    </p>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        As a division of Squadra Media Private Limited, we provide a holistic approach to digital
+                        transformation. We don't just build software; we engineer growth engines that scale with your
+                        ambitions. Our DNA is rooted in high-performance marketing and technical excellence.
+                    </p>
+                    <div class="pt-4">
+                        <a class="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 dark:bg-primary/20 hover:bg-slate-300 dark:hover:bg-primary/30 rounded-xl font-bold transition-all"
+                            href="https://squadramedia.com" target="_blank">
+                            <span>Visit Squadra Media</span>
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                        <img alt="Team collaborating in a modern office" class="w-full h-full object-cover"
+                            data-alt="Modern collaborative workspace with diverse team members"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf-xPRw9g-It0ZDzWoIdb5wXDFH8ld0wJyBMb_XMTDH1AvX4tn9YlbLqcK8tEUGLxyUHhXvBUlbNXJ2E0tiz3onSZnQp4t2mw40rVGy_oYb7i2LdCOYG3eSKCsG0wd9QTBY-HYqyX2xQUO-FEuPg-oKuCW538PE-pLNfnLebB4fBiR4bFYbMZ92pAcbOPa2ZqdTevMJnLRVhRBh4M3ZAkDg75Pdy-7rDhxIX2w-thwtuZ1No_L8bUU7fgFzOCaXn-rXEMmTTIiCgw" />
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-primary p-8 rounded-2xl shadow-xl hidden md:block">
+                        <div class="text-white">
+                            <div class="text-4xl font-bold">100+</div>
+                            <div class="text-sm opacity-80">Projects Delivered</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2: Industries We Serve -->
+        <section class="py-24 bg-slate-100 dark:bg-background-dark/50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-3xl md:text-4xl font-bold">Industries We Empower</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Deep domain expertise across high-growth sectors
+                        allows us to build solutions that speak your industry's language.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- Industry Bubbles -->
+                    <div
+                        class="group px-8 py-10 rounded-full border border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark hover:bg-primary hover:border-primary transition-all duration-300 flex flex-col items-center gap-4 w-48 h-48 justify-center shadow-lg hover:shadow-primary/40">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors">account_balance</span>
+                        <span
+                            class="font-bold text-sm tracking-tight group-hover:text-white transition-colors">BFSI</span>
+                    </div>
+                    <div
+                        class="group px-8 py-10 rounded-full border border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark hover:bg-primary hover:border-primary transition-all duration-300 flex flex-col items-center gap-4 w-48 h-48 justify-center shadow-lg hover:shadow-primary/40">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors">local_shipping</span>
+                        <span
+                            class="font-bold text-sm tracking-tight group-hover:text-white transition-colors">Shipping</span>
+                    </div>
+                    <div
+                        class="group px-8 py-10 rounded-full border border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark hover:bg-primary hover:border-primary transition-all duration-300 flex flex-col items-center gap-4 w-48 h-48 justify-center shadow-lg hover:shadow-primary/40">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors">shopping_bag</span>
+                        <span
+                            class="font-bold text-sm tracking-tight group-hover:text-white transition-colors">Retail</span>
+                    </div>
+                    <div
+                        class="group px-8 py-10 rounded-full border border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark hover:bg-primary hover:border-primary transition-all duration-300 flex flex-col items-center gap-4 w-48 h-48 justify-center shadow-lg hover:shadow-primary/40">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors">health_and_safety</span>
+                        <span
+                            class="font-bold text-sm tracking-tight group-hover:text-white transition-colors">Healthcare</span>
+                    </div>
+                    <div
+                        class="group px-8 py-10 rounded-full border border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark hover:bg-primary hover:border-primary transition-all duration-300 flex flex-col items-center gap-4 w-48 h-48 justify-center shadow-lg hover:shadow-primary/40">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors">school</span>
+                        <span
+                            class="font-bold text-sm tracking-tight group-hover:text-white transition-colors">EdTech</span>
+                    </div>
+                    <div
+                        class="group px-8 py-10 rounded-full border border-slate-200 dark:border-primary/20 bg-white dark:bg-background-dark hover:bg-primary hover:border-primary transition-all duration-300 flex flex-col items-center gap-4 w-48 h-48 justify-center shadow-lg hover:shadow-primary/40">
+                        <span
+                            class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors">precision_manufacturing</span>
+                        <span
+                            class="font-bold text-sm tracking-tight group-hover:text-white transition-colors">Manufacturing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3: Why Partner -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-1 space-y-6">
+                        <h2 class="text-4xl font-bold leading-tight">Why Leading Brands Partner With Us</h2>
+                        <p class="text-slate-600 dark:text-slate-400">We move beyond the typical vendor-client
+                            relationship, becoming a strategic extension of your internal teams.</p>
+                        <div class="h-1 w-20 bg-primary rounded-full"></div>
+                    </div>
+                    <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+                        <div
+                            class="p-8 rounded-2xl bg-slate-50 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">analytics</span>
+                            <h3 class="text-xl font-bold mb-3">Outcomes First</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We don't just deliver
+                                code; we deliver results. Every feature is tied back to a specific business KPI and
+                                objective.</p>
+                        </div>
+                        <div
+                            class="p-8 rounded-2xl bg-slate-50 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">corporate_fare</span>
+                            <h3 class="text-xl font-bold mb-3">Enterprise-Grade</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Built for scale,
+                                security, and reliability. We follow rigorous architecture standards to ensure
+                                future-proof stability.</p>
+                        </div>
+                        <div
+                            class="p-8 rounded-2xl bg-slate-50 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">bolt</span>
+                            <h3 class="text-xl font-bold mb-3">Agile Execution</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Speed is a competitive
+                                advantage. Our iterative cycles ensure constant feedback and rapid market entry.</p>
+                        </div>
+                        <div
+                            class="p-8 rounded-2xl bg-slate-50 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">support_agent</span>
+                            <h3 class="text-xl font-bold mb-3">Long-term Vision</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We provide managed
+                                services and ongoing support to ensure your technology matures as your business grows.
+                            </p>
+                        </div>
+                        <div
+                            class="p-8 rounded-2xl bg-slate-50 dark:bg-primary/5 border border-slate-200 dark:border-primary/10 md:col-span-2 flex items-center gap-6">
+                            <span class="material-symbols-outlined text-primary text-4xl">verified_user</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Uncompromising Security</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">Compliance-first approach with
+                                    rigorous data privacy and protection protocols across all projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: The Team -->
+        <section class="py-24 bg-slate-100 dark:bg-background-dark/50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                    <h2 class="text-4xl font-bold">The Minds Behind Squadra</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Our leadership brings together decades of experience
+                        in high-scale technology and strategic marketing.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Founder 1 -->
+                    <div class="group">
+                        <div class="relative mb-6 overflow-hidden rounded-2xl aspect-[3/4]">
+                            <img alt="Tarush - Co-founder"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Professional portrait of a male executive co-founder"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOPpzuWInZbPH5uU9GvsOgu_Vl_eqVYJArCkW2b7zgRLDCBoH2m66QyHhHPYh7xuV0b5mlhURxsIyfKY_EAh9N7RrIO3KpNsv-aw4jMv7lqUqFOZaDwj_LPxlvEPdkFl65pQ00Kk1ZwVuqt15dCTySHmpRBVXq2-0IKc5WU8O_6ZBqch9ZWDIKfpUWZ0QHDAuQYWvO3qqU7DwQBmsA1MD-XbVa9RSL1WccziaCTu1izNLAC9QWFm7KiFKXRgRbP3vq7VZ7EehTf6s" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <h3 class="text-xl font-bold">Tarush</h3>
+                                <p class="text-sm opacity-80">Co-Founder</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Visionary strategist
+                            focused on expanding Squadra’s footprint globally while maintaining core values of
+                            excellence and outcome-driven delivery.</p>
+                    </div>
+                    <!-- Founder 2 -->
+                    <div class="group">
+                        <div class="relative mb-6 overflow-hidden rounded-2xl aspect-[3/4]">
+                            <img alt="Anu - Co-founder"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Professional portrait of a female executive co-founder"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOPpzuWInZbPH5uU9GvsOgu_Vl_eqVYJArCkW2b7zgRLDCBoH2m66QyHhHPYh7xuV0b5mlhURxsIyfKY_EAh9N7RrIO3KpNsv-aw4jMv7lqUqFOZaDwj_LPxlvEPdkFl65pQ00Kk1ZwVuqt15dCTySHmpRBVXq2-0IKc5WU8O_6ZBqch9ZWDIKfpUWZ0QHDAuQYWvO3qqU7DwQBmsA1MD-XbVa9RSL1WccziaCTu1izNLAC9QWFm7KiFKXRgRbP3vq7VZ7EehTf6s" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <h3 class="text-xl font-bold">Anu</h3>
+                                <p class="text-sm opacity-80">Founder</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Operational excellence
+                            expert driving the inner machinery of Squadra Tech, ensuring projects are delivered with
+                            precision and efficiency.</p>
+                    </div>
+                    <!-- Founder 3 -->
+                    <div class="group">
+                        <div class="relative mb-6 overflow-hidden rounded-2xl aspect-[3/4]">
+                            <img alt="Sandesh - Co-founder"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Professional portrait of a male technical co-founder"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOPpzuWInZbPH5uU9GvsOgu_Vl_eqVYJArCkW2b7zgRLDCBoH2m66QyHhHPYh7xuV0b5mlhURxsIyfKY_EAh9N7RrIO3KpNsv-aw4jMv7lqUqFOZaDwj_LPxlvEPdkFl65pQ00Kk1ZwVuqt15dCTySHmpRBVXq2-0IKc5WU8O_6ZBqch9ZWDIKfpUWZ0QHDAuQYWvO3qqU7DwQBmsA1MD-XbVa9RSL1WccziaCTu1izNLAC9QWFm7KiFKXRgRbP3vq7VZ7EehTf6s" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <h3 class="text-xl font-bold">Sandesh</h3>
+                                <p class="text-sm opacity-80">Co-Founder</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">The technical architect
+                            behind our most complex enterprise deployments, bridging the gap between imagination and
+                            execution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5: Location -->
+        <section class="py-24 px-6">
+            <div
+                class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 bg-white dark:bg-primary/10 rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-primary/20">
+                <div class="p-10 lg:p-16 flex flex-col justify-center space-y-8">
+                    <h2 class="text-4xl font-bold">Find Us</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <div>
+                                <h4 class="font-bold text-lg">Headquarters</h4>
+                                <p class="text-slate-600 dark:text-slate-400">5th Floor, No. 1134, Shreeram Niwas, 100
+                                    Feet Rd,<br />HAL 2nd Stage, Bengaluru, Karnataka 560038</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <div>
+                                <h4 class="font-bold text-lg">General Inquiry</h4>
+                                <p class="text-slate-600 dark:text-slate-400"><a
+                                        href="mailto:info@squadramedia.com">info@squadramedia.com</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            <div>
+                                <h4 class="font-bold text-lg">Call Us</h4>
+                                <p class="text-slate-600 dark:text-slate-400">+91 63667 26494</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-h-[400px] relative">
+                    <img alt="Map Location" class="w-full h-full object-cover"
+                        data-alt="Map view showing city center location" data-location="Bengaluru, Karnataka"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaMgT_J-9vEoK6o39NmhJ-htgHmV4ndyzfKe9PVVDmNHl6EgT-6k17WQZDNI8FNfR90sBYZo1exwB7UZYrHmoUTxCG4Ll3Ql2h5uIAlUcA0YsTg8RoQc3SmDNEsRsP738YdF75uZFh_fdOKR2u-35MJ4HeuwDaJx9lQTd42jvD8RDwCIGGfsUwjSfLcMyBJ-Hnu_lXLmskhZzBV04c2HpAfVvA4J1k0DURcJTIqiI-yehSN9TmmQ6Tgmk4eg2h0Y5pQmCqidi274Q" />
+                    <div class="absolute inset-0 bg-primary/20 pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-background-dark border-t border-slate-200 dark:border-primary/20 py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/squadra-media.png" alt="Squadra Tech Logo" class="h-8 w-auto">
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-sm">
+                        Building the future of enterprise technology through innovation, collaboration, and a focus on
+                        measurable business outcomes.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="what-we-do.html">Our Process</a></li>
+                        <li><a class="text-sm font-medium hover:text-primary transition-colors"
+                                href="case-studies.html">Case Studies</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold">Newsletter</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Get the latest tech insights delivered to your
+                        inbox.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/20 rounded-lg px-4 py-2 text-sm w-full outline-none focus:border-primary transition-colors"
+                            placeholder="Email" type="email" />
+                        <button
+                            class="bg-primary text-white px-4 py-2 rounded-lg material-symbols-outlined">send</button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-200 dark:border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>© 2025 Squadra Tech. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary" href="#">LinkedIn</a>
+                    <a class="hover:text-p

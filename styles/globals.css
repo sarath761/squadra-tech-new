@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply dark;
+  }
+  body {
+    @apply bg-bg-dark text-white font-display antialiased selection:bg-primary/30 selection:text-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
+  }
+  
+  /* Background: CSS animated gradient shifting */
+  .animate-gradient {
+    background: linear-gradient(-45deg, #14181e, #2a4a7e, #1e293b, #14181e);
+    background-size: 400% 400%;
+    animation: gradient-shift 12s ease infinite;
+  }
+}
