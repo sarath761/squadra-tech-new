@@ -9,20 +9,28 @@ const EXPERTISE = [
 
 export default function ExpertiseGrid() {
   return (
-    <section className="py-14 md:py-16" id="expertise">
+    <section className="py-16 md:py-24" id="expertise">
       <div className="max-w-7xl mx-auto px-4">
         <AnimateOnScroll variant="fade-up">
-          <h2 className="text-4xl lg:text-5xl font-serif italic mb-2 text-center">Our Expertise.</h2>
-          <p className="text-slate-500 text-lg mb-12 leading-relaxed text-center max-w-2xl mx-auto">Everything you need to build, launch and grow online.</p>
+          <h2 className="text-4xl font-serif italic mb-2 text-center">
+            Our Expertise.
+          </h2>
+          <p className="text-slate-500 text-lg mb-8 leading-relaxed text-center">
+            Everything you need to build, launch and grow online.
+          </p>
         </AnimateOnScroll>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {EXPERTISE.map((item, idx) => (
             <AnimateOnScroll key={idx} variant="scale-up" delay={idx * 0.1}>
-              <div className="p-8 rounded-2xl bg-bg-light dark:bg-bg-dark border border-white/15 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 h-full">
-                <span className="material-symbols-outlined text-4xl text-primary mb-6">{item.icon}</span>
-                <h5 className="font-bold text-lg mb-3">{item.title}</h5>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
+              <div className="p-8 rounded-2xl bg-bg-light dark:bg-bg-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 h-full">
+                <span className="material-symbols-outlined text-3xl text-primary mb-4 block">
+                  {item.icon}
+                </span>
+                <h5 className="font-bold">{item.title}</h5>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             </AnimateOnScroll>
           ))}

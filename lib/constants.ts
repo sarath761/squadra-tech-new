@@ -116,11 +116,6 @@ export const STATS = [
   { number: 100, suffix: "+", label: "Tech Experts" },
 ];
 
-export const AI_STATS = [
-  { number: 3, suffix: "x", label: "Faster Delivery" },
-  { number: 60, suffix: "%", label: "Cost Reduction" },
-  { number: 1, suffix: "", label: "Day 1 Value" },
-];
 
 export const WHY_SQUADRA = [
   { title: "Enterprise Grade", description: "Scalable, secure, and compliant architectures." },
@@ -192,3 +187,34 @@ export const FORM_OPTIONS = {
   industries: ["Fintech", "Healthcare", "E-commerce", "Education", "Logistics", "Other"],
   challenges: ["Legacy Modernization", "Cloud Migration", "Custom App Development", "Team Augmentation", "Other"],
 };
+
+
+export const AI_STATS = [
+  {
+    number: 3,
+    suffix: "x",
+    display: "3x",
+    isText: false,
+    title: "Faster to market",
+    description:
+      "AI-powered agencies ship in days. Traditional agencies are still in kick-off calls.",
+  },
+  {
+    number: 60,
+    suffix: "%",
+    display: "60%",
+    isText: false,
+    title: "Less back and forth",
+    description:
+      "When you see the mockup first, approvals happen faster and revisions drop significantly.",
+  },
+  {
+    number: 0,
+    suffix: "",
+    display: "Day 1",
+    isText: true,
+    title: "Built for growth",
+    description:
+      "Every site we build is optimised for speed, search and conversion from the very first line of code.",
+  },
+];

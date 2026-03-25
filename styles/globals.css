@@ -67,3 +67,37 @@
     animation: gradient-shift 12s ease infinite;
   }
 }
+
+/* ── Glass Card (matches HTML prototype) ─────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ── Animation Delays (blob stagger) ─────────── */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* ── Hide Scrollbar (for carousels/marquees) ─── */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Marquee infinite scroll ─────────────────── */
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
