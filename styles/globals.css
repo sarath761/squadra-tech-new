@@ -1,26 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-primary: #2a4a7e;
+  --color-bg-light: #f6f7f8;
+  --color-bg-dark: #14181e;
+  --color-gold: #D4A843;
+  --color-coral: #C45C4D;
+
+  --font-display: var(--font-display), sans-serif;
+  --font-serif: var(--font-serif), serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-blob: blob 7s infinite;
+  --animate-gradient: gradient-shift 12s ease infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes blob {
+    0%, 100% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
 
 @layer base {
-  html {
-    @apply dark;
+  html, body {
+    background-color: var(--color-bg-dark);
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  body {
-    @apply bg-bg-dark text-white font-display antialiased selection:bg-primary/30 selection:text-white;
+  
+  ::selection {
+    background-color: rgba(42, 74, 126, 0.3);
+    color: #ffffff;
   }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight text-white;
+    font-family: var(--font-serif), serif;
+    letter-spacing: -0.025em; /* tracking-tight */
+    color: #ffffff;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
+    background: linear-gradient(to right, #2a4a7e, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
-  /* Background: CSS animated gradient shifting */
-  .animate-gradient {
+  /* Retain fallback for animated gradient if native Tailwind fails */
+  .animate-gradient-fallback {
     background: linear-gradient(-45deg, #14181e, #2a4a7e, #1e293b, #14181e);
     background-size: 400% 400%;
     animation: gradient-shift 12s ease infinite;

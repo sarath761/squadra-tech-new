@@ -7,26 +7,88 @@ export const NAV_LINKS = [
 ];
 
 export const SERVICES = [
-  { title: "Mobile App Development", description: "iOS and Android apps.", icon: "📱", tags: ["React Native", "Flutter"] },
-  { title: "E-commerce Solutions", description: "Scalable online stores.", icon: "🛍️", tags: ["Shopify", "Magento"] },
-  { title: "Cloud Architecture", description: "AWS, Azure, and Google Cloud.", icon: "☁️", tags: ["AWS", "Azure"] },
-  { title: "DevOps & CI/CD", description: "Seamless deployment pipelines.", icon: "🚀", tags: ["Docker", "Kubernetes"] },
-  { title: "Custom CRM Systems", description: "Customer relationship management.", icon: "💼", tags: ["Salesforce", "Custom"] },
-  { title: "Learning Management Systems (LMS)", description: "Educational platforms.", icon: "🎓", tags: ["Moodle", "Custom"] },
-  { title: "AI & Machine Learning", description: "Intelligent automation.", icon: "🤖", tags: ["Python", "TensorFlow"] },
-  { title: "UI/UX Design", description: "User-centric interfaces.", icon: "🎨", tags: ["Figma", "Sketch"] },
-  { title: "Web Application Development", description: "Complex web platforms.", icon: "💻", tags: ["Next.js", "React"] },
-  { title: "Cybersecurity Services", description: "Security audits and implementation.", icon: "🔒", tags: ["Audit", "Compliance"] },
+  { title: "E-Commerce", description: "Custom storefronts and seamless shopping experiences optimized for conversion. We build high-performance retail platforms that handle scale and provide intuitive user journeys from landing to checkout.", icon: "shopping_cart", tags: ["Shopify", "Magento", "WooCommerce"] },
+  { title: "Mobile Development", description: "Native and cross-platform mobile apps built with performance and UX in mind. Our mobile solutions are designed to engage users across iOS and Android with fluid animations.", icon: "smartphone", tags: ["Flutter", "React Native", "Swift"] },
+  { title: "Platform Engineering", description: "Scalable infrastructure and architecture design for modern enterprise applications. We create developer-centric platforms that automate delivery and ensure operational excellence.", icon: "layers", tags: ["Kubernetes", "Docker", "Microservices"] },
+  { title: "CRM Solutions", description: "Streamline your sales and customer relations with integrated management systems. We implement and customize CRM platforms that provide a 360-degree view of your customer lifecycle.", icon: "groups", tags: ["Salesforce", "Hubspot", "Zoho"] },
+  { title: "LMS Platforms", description: "Next-generation learning management systems for corporate training and educational institutions. We develop engaging, interactive platforms with deep tracking and analytics.", icon: "school", tags: ["Moodle", "Canvas", "Custom LMS"] },
+  { title: "Cloud & DevOps", description: "Accelerate deployment cycles with robust cloud infrastructure and automation. We help organizations migrate to the cloud and adopt CI/CD pipelines that ensure stability and speed.", icon: "cloud_done", tags: ["AWS", "Azure", "Google Cloud"] },
+  { title: "Data Analytics", description: "Unlock actionable insights through advanced data processing and visualization. We turn raw data into strategic assets that drive decision-making and operational improvements.", icon: "query_stats", tags: ["Python", "PowerBI", "Tableau"] },
+  { title: "Cybersecurity", description: "Comprehensive security audits and implementation to protect your digital assets. We provide end-to-end protection from threat detection to incident response and compliance management.", icon: "security", tags: ["Pen-Testing", "IAM", "SOC"] },
+  { title: "Managed Services", description: "Proactive monitoring and maintenance to keep your operations running smoothly 24/7. Our dedicated support teams ensure your systems are always patched, secure, and performant.", icon: "support_agent", tags: ["24/7 Support", "IT Strategy"] },
+  { title: "System Integrations", description: "Connecting disparate systems for unified data flow and operational efficiency. We specialize in complex middleware solutions that bridge legacy systems with modern SaaS applications.", icon: "hub", tags: ["REST APIs", "GraphQL", "Middleware"] },
 ];
 
 export const CASE_STUDIES = [
-  { title: "Global E-commerce Scale", category: "E-commerce", description: "Scaling a nationwide retail brand.", challenge: "High traffic events crashing the site.", solution: "Microservices architecture on AWS.", impact: "Zero downtime during flash sales.", metric: "400% increase in peak handling", image: "/images/case-studies/1.jpg" },
-  { title: "Fintech Mobile App", category: "Mobile Apps", description: "Secure banking for millennial users.", challenge: "Complex onboarding process.", solution: "Streamlined KYC and biometric login.", impact: "Increased user retention.", metric: "65% faster onboarding", image: "/images/case-studies/2.jpg" },
-  { title: "Healthcare CRM Integration", category: "CRM", description: "Patient management system.", challenge: "Fragmented patient data.", solution: "Unified secure CRM.", impact: "Improved patient outcomes.", metric: "30% reduction in wait times", image: "/images/case-studies/3.jpg" },
-  { title: "Corporate LMS Platform", category: "LMS", description: "Training platform for 10k+ employees.", challenge: "Low engagement rates.", solution: "Gamified learning modules.", impact: "Higher course completion.", metric: "85% completion rate", image: "/images/case-studies/4.jpg" },
-  { title: "AI Supply Chain Optimization", category: "AI/ML", description: "Predictive inventory management.", challenge: "Stockouts and overstock.", solution: "AI forecasting model.", impact: "Optimized inventory levels.", metric: "20% cost savings", image: "/images/case-studies/5.jpg" },
-  { title: "Cloud Logistics Dashboard", category: "Cloud", description: "Real-time fleet tracking.", challenge: "Poo real-time visibility.", solution: "IoT integration to cloud dashboard.", impact: "Accurate delivery estimates.", metric: "99.9% uptime tracking", image: "/images/case-studies/6.jpg" },
-  { title: "Enterprise Security Audit", category: "Cybersecurity", description: "Bank security overhaul.", challenge: "Outdated compliance.", solution: "Zero-trust architecture.", impact: "Passed all regulatory audits.", metric: "0 breaches", image: "/images/case-studies/7.jpg" },
+  {
+    title: "Seaverse Marine Learning",
+    category: "EdTech",
+    link: "seaverse.com",
+    image: "/images/work/seaverse.png",
+    challenge: "Low engagement in traditional maritime training manuals and high dropout rates in offshore certification programs.",
+    solution: "Developed an immersive LMS with 3D simulations and adaptive learning paths tailored to maritime regulations.",
+    impact: "Streamlined training for 5,000+ crew members with a significant boost in safety compliance scores.",
+    metric: "+40% Retention",
+    metricLabel: "User Engagement Growth",
+  },
+  {
+    title: "B.Bath",
+    category: "E-Commerce",
+    link: "bbath.com",
+    image: "/images/work/bbath.png",
+    challenge: "Outdated legacy storefront resulting in slow page loads and high cart abandonment during peak sales.",
+    solution: "Replatformed to a headless Shopify architecture with Next.js, optimizing the entire checkout flow.",
+    impact: "Achieved sub-second page loads and a massive conversion rate lift across all device types.",
+    metric: "-2.5s Load Time",
+    metricLabel: "Performance Improvement",
+  },
+  {
+    title: "AKE",
+    category: "Fintech",
+    link: "ake.finance",
+    image: "/images/work/ake.png",
+    challenge: "Complex onboarding process causing users to drop off before completing KYC verification.",
+    solution: "Designed a streamlined, mobile-first onboarding flow with automated OCR for document scanning.",
+    impact: "Reduced onboarding time from 15 minutes to under 3 minutes, dramatically increasing user acquisition.",
+    metric: "5x Acquisition",
+    metricLabel: "User Growth",
+  },
+  {
+    title: "Novella Ice Cream",
+    category: "F&B",
+    link: "novella.ae",
+    image: "/images/work/novella.png",
+    description: "Custom ERP integration with a mobile app that syncs real-time inventory and tracks customer rewards across 15+ locations.",
+    metric: "35% Repeat Rate",
+    metricLabel: "Customer Loyalty Increase",
+  },
+  {
+    title: "CAIC Ice Cream",
+    category: "Retail",
+    link: "caic.shop",
+    image: "/images/work/caic.png",
+    description: "Built a gesture-based touchscreen interface with high-fidelity 3D renders of toppings and flavors for in-store kiosks.",
+    metric: "+20% Order Value",
+    metricLabel: "In-store Upselling Success",
+  },
+  {
+    title: "New Property UAE",
+    category: "Real Estate",
+    link: "newpropertyuae.com",
+    image: "/images/work/newpropertyuae.png",
+    description: "AI-powered recommendation engine that matches buyers to properties based on investment goals and lifestyle preferences.",
+    metric: "3x Lead Gen",
+    metricLabel: "Marketing Efficiency",
+  },
+  {
+    title: "Trend and Silhouette",
+    category: "Fashion Tech",
+    link: "trend-silhouette.com",
+    image: "/images/work/trendandsilhouette.png",
+    description: "A B2B collaborative platform for tech-pack sharing, real-time feedback, and automated shipping logistics.",
+    metric: "-50% Sample Time",
+    metricLabel: "Production Cycle Improvement",
+  }
 ];
 
 export const PROCESS_STEPS = [
@@ -67,6 +129,14 @@ export const WHY_SQUADRA = [
   { title: "Business Focused", description: "We build technology that drives measurable business outcomes." },
 ];
 
+export const WHY_PARTNER = [
+  { icon: "analytics", title: "Outcomes First", description: "We don't just deliver code; we deliver results. Every feature is tied back to a specific business KPI and objective." },
+  { icon: "corporate_fare", title: "Enterprise-Grade", description: "Built for scale, security, and reliability. We follow rigorous architecture standards to ensure future-proof stability." },
+  { icon: "bolt", title: "Agile Execution", description: "Speed is a competitive advantage. Our iterative cycles ensure constant feedback and rapid market entry." },
+  { icon: "support_agent", title: "Long-term Vision", description: "We provide managed services and ongoing support to ensure your technology matures as your business grows." },
+  { icon: "verified_user", title: "Uncompromising Security", description: "Compliance-first approach with rigorous data privacy and protection protocols across all projects." }
+];
+
 export const CLIENT_NAMES = [
   "Acme Corp", "Globex", "Initech", "Umbrella Corp", "Soylent Corp", "Stark Industries", "Wayne Enterprises", "Cyberdyne Systems"
 ];
@@ -89,12 +159,21 @@ export const TEAM_COMPOSITION = {
 };
 
 export const TECH_STACKS = [
-  { category: "Frontend", tools: ["Next.js", "React", "Vue", "Tailwind CSS"] },
-  { category: "Backend", tools: ["Node.js", "Python", "Java", "Go"] },
-  { category: "Cloud & DevOps", tools: ["AWS", "Azure", "Docker", "Kubernetes"] },
-  { category: "Database", tools: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"] },
-  { category: "Mobile", tools: ["React Native", "Flutter", "Swift", "Kotlin"] },
-  { category: "AI/ML", tools: ["TensorFlow", "PyTorch", "OpenAI API", "Hugging Face"] },
+  { category: "Languages & Frameworks", icon: "code", tools: ["TypeScript", "React.js", "Node.js", "Python", "Go", "Next.js"] },
+  { category: "AI & Automation", icon: "smart_toy", tools: ["OpenAI API", "LangChain", "TensorFlow", "UiPath", "Make.com"] },
+  { category: "Data & Analytics", icon: "analytics", tools: ["PostgreSQL", "Redis", "Snowflake", "Tableau", "Apache Spark"] },
+  { category: "Cloud & DevOps", icon: "cloud", tools: ["AWS", "Google Cloud", "Docker", "Kubernetes", "Terraform"] },
+  { category: "Security", icon: "shield", tools: ["OAuth 2.0", "Cloudflare", "SentinelOne", "Vault"] },
+  { category: "Collaboration", icon: "diversity_3", tools: ["Jira", "Slack", "Figma", "GitHub"] },
+];
+
+export const ACHIEVEMENTS = [
+  { metric: "200k+", label: "LMS Active Users", icon: "groups" },
+  { metric: "500+", label: "AI Automations", icon: "rocket_launch" },
+  { metric: "99%", label: "Success Rate", icon: "verified" },
+  { metric: "40%", label: "Efficiency Boost", icon: "timer" },
+  { metric: "150+", label: "Enterprise Clients", icon: "business" },
+  { metric: "24/7", label: "Managed Support", icon: "support_agent" },
 ];
 
 export const COMPANY_INFO = {

@@ -35,7 +35,7 @@ export default function Footer() {
             <h6 className="font-bold mb-6 text-white">Company</h6>
             <ul className="space-y-3 text-sm text-slate-500">
               <li><Link className="hover:text-primary transition-colors" href="/case-studies">Case Studies</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/how-we-do">Our Process</Link></li>
+              <li><Link className="hover:text-primary transition-colors" href="/how-we-do">How We Do</Link></li>
               <li><Link className="hover:text-primary transition-colors" href="/about">About Us</Link></li>
               <li><Link className="hover:text-primary transition-colors" href="/contact">Contact</Link></li>
             </ul>
