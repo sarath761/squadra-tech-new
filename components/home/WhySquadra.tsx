@@ -35,7 +35,7 @@ export default function WhySquadra() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <AnimateOnScroll variant="fade-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white tracking-tight leading-[0.9] text-center mb-4">
-            Why Global Leaders Choose Us
+            Why Global Leaders Choose Us?
           </h2>
           <p className="text-center text-base text-slate-300 mb-16 font-display">
             A team that ships fast and builds for growth.

@@ -200,7 +200,7 @@ export const AI_STATS = [
   {
     number: 0,
     suffix: "",
-    display: "Day 1",
+    display: "100%",
     isText: true,
     title: "Built for growth",
     description:

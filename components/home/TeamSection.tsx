@@ -20,12 +20,12 @@ export default function TeamSection() {
         <div>
           <AnimateOnScroll variant="fade-right">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white text-center mb-4">
-              The People Behind Your Website.
+              The People Behind Your Website
             </h2>
             <p className="text-slate-500 text-lg mb-8 leading-relaxed">
               Squadra is a team of 100+ designers, developers, strategists and
-              creatives based in Bangalore. We have been building for brands
-              across India and the UAE for over five years. What makes us
+              creators based in Bangalore. We have been building for brands
+              across India and UAE for over five years. What makes us
               different is how we work. AI handles the heavy lifting so our team
               can focus on what actually matters: craft, strategy and results.
             </p>

@@ -161,7 +161,7 @@ export default function AboutPage() {
                     Why Us
                   </span>
                 </div>
-                <h2 className="text-4xl font-display font-semibold text-white tracking-tight leading-[0.9]">Why Leading Brands Partner With Us</h2>
+                <h2 className="text-4xl font-display font-semibold text-white tracking-tight leading-[0.9]">Why Leading Brands Partner With Us?</h2>
                 <p className="text-slate-400 text-lg font-display font-light">
                   We move beyond the typical vendor-client relationship, becoming a strategic extension of your internal teams.
                 </p>

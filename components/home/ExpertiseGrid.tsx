@@ -42,7 +42,7 @@ export default function ExpertiseGrid() {
             Our Expertise
           </h2>
           <p className="text-base text-slate-300 mb-10 leading-relaxed text-center font-display">
-            Everything you need to build, launch and grow online.
+            Everything you need to build, launch and grow online
           </p>
         </AnimateOnScroll>
 

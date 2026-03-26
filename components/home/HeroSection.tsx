@@ -25,7 +25,7 @@ export default function HeroSection() {
             <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight mb-6">
               See Your Website Mockup In 48 Hours.{" "}
               <span className="text-primary not-italic font-display font-black block lg:inline">
-                What&apos;s Next.
+                What&apos;s Next?
               </span>
             </h1>
           </AnimateOnScroll>
