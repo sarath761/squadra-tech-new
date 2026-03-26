@@ -106,18 +106,19 @@ export default function CaseStudiesPage() {
               <AnimateOnScroll key={idx} variant={isEven ? "fade-left" : "fade-right"}>
                 <article className={`flex flex-col ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 group`}>
                   <div className="w-full lg:w-1/2 overflow-hidden rounded-xl aspect-[16/10] relative shadow-2xl liquid-glass">
+                    <div className="absolute inset-0 bg-[url('/images/casestudyBg.png')] bg-cover bg-center bg-slate-800" />
                     <div
-                      className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 bg-slate-800"
+                      className="absolute inset-0 bg-contain bg-center bg-no-repeat group-hover:scale-105 transition-transform duration-700"
                       style={{ backgroundImage: `url('${study.image}')` }}
                     />
                   </div>
 
                   <div className="w-full lg:w-1/2 space-y-6">
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">
+                      <span className="px-3 py-1 bg-primary/20 text-primary text-md font-bold rounded-full">
                         {study.category}
                       </span>
-                      <span className="px-3 py-1 bg-white/[0.06] text-slate-400 text-xs font-medium rounded-full">
+                      <span className="px-3 py-1 bg-white/[0.06] text-slate-400 text-md font-medium rounded-full">
                         {study.link}
                       </span>
                     </div>
