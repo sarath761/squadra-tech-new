@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FORM_OPTIONS } from "@/lib/constants";
+import { toast } from "react-hot-toast";
 
 export default function LeadForm({ className = "" }: { className?: string }) {
   const [formData, setFormData] = useState({
@@ -13,11 +14,51 @@ export default function LeadForm({ className = "" }: { className?: string }) {
     challenge: "",
     website: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Form submitted! We will be in touch within 24 hours.");
-    setFormData({ firstName: "", lastName: "", company: "", phone: "", industry: "", challenge: "", website: "" });
+    
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.company || !formData.phone || !formData.industry || !formData.challenge) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+    
+    // Basic phone validation (just checking if it has enough digits)
+    const phoneRegex = /^[+]?[\d\s-]{7,16}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      toast.error("Please enter a valid phone number.");
+      return;
+    }
+
+    if (formData.website && !formData.website.startsWith('http')) {
+       toast.error("Please enter a valid website URL starting with http:// or https://");
+       return;
+    }
+
+    setIsSubmitting(true);
+    const toastId = toast.loading("Submitting your request...");
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      const data = await res.json();
+      
+      if (res.ok && data.success) {
+        toast.success("Form submitted! We will be in touch within 24 hours.", { id: toastId });
+        setFormData({ firstName: "", lastName: "", company: "", phone: "", industry: "", challenge: "", website: "" });
+      } else {
+        toast.error(data.message || "Failed to submit form.", { id: toastId });
+      }
+    } catch (error) {
+      toast.error("An error occurred while submitting. Please try again.", { id: toastId });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -62,8 +103,15 @@ export default function LeadForm({ className = "" }: { className?: string }) {
         <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Website URL <span className="font-normal normal-case">(optional)</span></label>
         <input name="website" value={formData.website} onChange={handleChange} className="w-full bg-white/5 border border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="https://yoursite.com" type="url" />
       </div>
-      <button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all">
-        Get My Free Assessment →
+      <button disabled={isSubmitting} type="submit" className="w-full flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all">
+        {isSubmitting ? (
+          <>
+            <span className="material-symbols-outlined animate-spin text-lg">refresh</span>
+            Submitting...
+          </>
+        ) : (
+          "Get My Free Assessment →"
+        )}
       </button>
     </form>
   );

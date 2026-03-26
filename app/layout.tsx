@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { siteMetadata } from "@/lib/metadata";
+import { Toaster } from "react-hot-toast";
 
 const display = Plus_Jakarta_Sans({ 
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Toaster position="top-center" toastOptions={{ style: { background: '#1e293b', color: '#fff', border: '1px solid rgba(255,255,255,0.1)' } }} />
       </body>
     </html>
   );
