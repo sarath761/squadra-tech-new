@@ -1,3 +1,4 @@
+// components/ui/FAQ.tsx
 "use client";
 
 import { useState } from "react";
@@ -8,22 +9,30 @@ export default function FAQ({ className = "" }: { className?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className={`space-y-4 ${className}`} id="faq-container">
+    <div className={`space-y-3 ${className}`} id="faq-container">
       {FAQ_ITEMS.map((item, index) => {
         const isOpen = openIndex === index;
         return (
-          <div key={index} className="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-transparent">
-            <div 
-              className="p-6 hover:bg-primary/5 cursor-pointer transition-all flex justify-between items-center bg-white dark:bg-slate-900/30"
+          <div
+            key={index}
+            className={`liquid-glass rounded-2xl overflow-hidden transition-all duration-500 ${
+              isOpen ? "shadow-lg shadow-primary/10" : ""
+            }`}
+          >
+            <div
+              className="p-6 md:p-7 cursor-pointer transition-all duration-300 flex justify-between items-center group hover:bg-white/[0.03]"
               onClick={() => setOpenIndex(isOpen ? null : index)}
             >
-              <h5 className="font-bold pr-8">{item.question}</h5>
-              <span 
-                className="material-symbols-outlined transition-transform duration-300 flex-shrink-0"
-                style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)' }}
+              <h5 className="text-base md:text-lg font-display font-semibold text-white/90 pr-8 tracking-tight">
+                {item.question}
+              </h5>
+              <motion.span
+                animate={{ rotate: isOpen ? 45 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-primary text-2xl flex-shrink-0 font-light"
               >
-                add
-              </span>
+                +
+              </motion.span>
             </div>
             <AnimatePresence>
               {isOpen && (
@@ -31,12 +40,15 @@ export default function FAQ({ className = "" }: { className?: string }) {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="text-slate-500 text-sm leading-relaxed px-6 pb-6 bg-white dark:bg-slate-900/30">
-                    {item.answer}
-                  </p>
+                  <div className="px-6 md:px-7 pb-7">
+                    <div className="h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mb-5" />
+                    <p className="text-base text-white/70 leading-[1.75] font-display font-light">
+                      {item.answer}
+                    </p>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

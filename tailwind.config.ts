@@ -26,11 +26,21 @@ const config: Config = {
         xl: "1.5rem",
       },
       animation: {
+        "ticker-left": "ticker-left linear infinite",
+        "ticker-right": "ticker-right linear infinite",
         "marquee": "marquee 40s linear infinite",
         "blob": "blob 7s infinite",
         "gradient": "gradient-shift 12s ease infinite",
       },
       keyframes: {
+        "ticker-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-25%)" },
+        },
+        "ticker-right": {
+          "0%": { transform: "translateX(-25%)" },
+          "100%": { transform: "translateX(0)" },
+        },
         marquee: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },

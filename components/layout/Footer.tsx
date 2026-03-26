@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h6 className="font-bold mb-6">Industries</h6>
+            <h6 className="font-display mb-6">Industries</h6>
             <ul className="space-y-3 text-sm text-slate-500">
               <li>
                 <Link
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h6 className="font-bold mb-6">Company</h6>
+            <h6 className="font-display mb-6">Company</h6>
             <ul className="space-y-3 text-sm text-slate-500">
               <li>
                 <Link
@@ -124,7 +124,7 @@ export default function Footer() {
 
           {/* Subscribe */}
           <div>
-            <h6 className="font-bold mb-6">Subscribe</h6>
+            <h6 className="font-display mb-6">Subscribe</h6>
             <p className="text-sm text-slate-500 mb-4">
               Get the latest insights on AI and scale.
             </p>

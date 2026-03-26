@@ -22,7 +22,7 @@ export default function HeroSection() {
           </AnimateOnScroll>
 
           <AnimateOnScroll variant="blur-in" delay={0.1}>
-            <h1 className="text-5xl lg:text-7xl font-serif italic leading-tight mb-6">
+            <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight mb-6">
               See Your Website Mockup In 48 Hours.{" "}
               <span className="text-primary not-italic font-display font-black block lg:inline">
                 What&apos;s Next.
@@ -49,8 +49,8 @@ export default function HeroSection() {
         {/* Right Column — Form */}
         <div className="lg:col-span-5 relative">
           <AnimateOnScroll variant="fade-left" delay={0.3}>
-            <div className="glass-card p-8 rounded-2xl shadow-2xl relative z-10">
-              <h3 className="text-2xl font-bold mb-2">Get a Free Technology Assessment</h3>
+            <div className="liquid-glass p-8 rounded-2xl shadow-2xl relative z-10">
+              <h2 className="text-2xl font-bold font-display tracking-tight mb-2">Get a Free Technology Assessment</h2>
               <p className="text-sm text-slate-500 mb-6">
                 Fill in your details and we will be in touch within 24 hours.
               </p>

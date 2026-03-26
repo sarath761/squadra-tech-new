@@ -35,28 +35,12 @@ export default function Carousel({ className = "" }: { className?: string }) {
       {/* Heading + Arrows — constrained to max-w-7xl */}
       <div className="max-w-7xl mx-auto px-4 mb-12 flex justify-between items-end">
         <div>
-          <h2 className="text-4xl font-serif italic mb-4">Featured Work</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white tracking-tight leading-[0.9] text-center mb-4">
+            Featured Work
+          </h2>
           <p className="text-slate-500 max-w-md">
             Real results for industry leaders across the globe.
           </p>
-        </div>
-        <div className="hidden md:flex gap-2">
-          <button
-            onClick={prevSlide}
-            className="p-3 border border-slate-700 rounded-full hover:bg-primary transition-colors group"
-          >
-            <span className="material-symbols-outlined text-slate-400 group-hover:text-white">
-              west
-            </span>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="p-3 border border-slate-700 rounded-full hover:bg-primary transition-colors group"
-          >
-            <span className="material-symbols-outlined text-slate-400 group-hover:text-white">
-              east
-            </span>
-          </button>
         </div>
       </div>
 
