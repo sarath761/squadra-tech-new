@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function FAQSection() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden" style={{ minHeight: "600px" }}>
+    <section className="py-20 md:py-16 relative overflow-hidden" style={{ minHeight: "600px" }}>
       {/* Same background family — no top fade from FinalCTA, bottom fade into footer */}
       <div className="absolute inset-0 bg-slate-900/30">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-indigo-500/10" />
@@ -35,7 +35,7 @@ export default function FAQSection() {
         <div className="absolute bottom-0 left-0 right-0 h-[120px] bg-gradient-to-t from-[#14181e] to-transparent z-[2]" />
       </div>
 
-      <div className="max-w-3xl mx-auto px-6 relative z-10">
+      <div className="max-w-3xl mx-auto px-4 relative z-10">
         <AnimateOnScroll variant="fade-up">
           <div className="flex justify-center mb-5">
             <span className="liquid-glass rounded-full px-5 py-2 text-sm font-display font-medium text-white/90 tracking-wide">

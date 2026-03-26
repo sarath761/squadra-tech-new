@@ -70,7 +70,7 @@ export default function Carousel({ className = "" }: { className?: string }) {
                 <span className="text-xs font-bold uppercase tracking-widest bg-primary px-3 py-1 rounded-full mb-2 inline-block">
                   {study.category}
                 </span>
-                <h4 className="text-2xl font-bold">{study.title}</h4>
+                <h4 className="text-2xl font-display font-semibold">{study.title}</h4>
               </div>
             </div>
           </div>

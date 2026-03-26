@@ -24,11 +24,10 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-[100] w-full transition-all duration-300 border-b ${
-        isScrolled || mobileMenuOpen
+      className={`sticky top-0 z-[100] w-full transition-all duration-300 border-b ${isScrolled || mobileMenuOpen
           ? "border-primary/20 bg-bg-dark/95 backdrop-blur-md"
           : "border-primary/20 bg-bg-dark/80 backdrop-blur-md"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
@@ -36,13 +35,10 @@ export default function Header() {
           <Image
             src="/images/squadra-media.png"
             alt="Squadra Tech Logo"
-            width={32}
-            height={32}
-            className="h-8 w-auto"
+            width={160}
+            height={48}
+            className="h-12 w-auto"
           />
-          <h2 className="text-xl font-extrabold tracking-tight font-display">
-            Squadra Tech
-          </h2>
         </Link>
 
         {/* Desktop Nav */}
@@ -51,11 +47,10 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors ${
-                pathname === link.href
+              className={`text-md transition-colors ${pathname === link.href
                   ? "font-semibold text-primary"
                   : "font-medium hover:text-primary"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -87,9 +82,8 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-lg font-medium py-3 border-b border-white/5 ${
-                  pathname === link.href ? "text-primary" : "text-slate-300"
-                }`}
+                className={`text-lg font-medium py-3 border-b border-white/5 ${pathname === link.href ? "text-primary" : "text-slate-300"
+                  }`}
               >
                 {link.label}
               </Link>

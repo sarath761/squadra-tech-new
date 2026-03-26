@@ -13,9 +13,9 @@ export default function Footer() {
               <Image
                 src="/images/squadra-media.png"
                 alt="Squadra Tech Logo"
-                width={120}
-                height={32}
-                className="h-8 w-auto"
+                width={160}
+                height={48}
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed mb-6">

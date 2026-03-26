@@ -3,7 +3,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
 export default function FinalCTA() {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-16 md:py-16 relative overflow-hidden">
       {/* Same background family — top fade from ProcessSteps, no bottom fade into FAQ */}
       <div className="absolute inset-0 bg-slate-900/30">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-primary/10" />
