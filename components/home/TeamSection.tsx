@@ -63,7 +63,7 @@ export default function TeamSection() {
         <AnimateOnScroll variant="fade-left" delay={0.2} className="group">
           <div className="relative">
             <img
-              src="/images/WHO WE ARE.webp"
+              src="/images/WHO WE ARE.jpg"
               alt="Squadra Tech team and capabilities"
               className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-1000"
               style={{

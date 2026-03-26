@@ -272,26 +272,28 @@ export default function AboutPage() {
             </AnimateOnScroll>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 mb-24">
-            {[
-              { name: "Tarush", title: "Co-Founder", desc: "Visionary strategist focused on expanding Squadra's footprint globally while maintaining core values of excellence." },
-              { name: "Anu", title: "Co-Founder", desc: "Operational excellence expert driving the inner machinery of Squadra Tech, ensuring flawless project delivery." },
-              { name: "Sandesh", title: "Co-Founder", desc: "The technical architect behind our most complex enterprise deployments, bridging the gap between imagination and execution." },
-            ].map((founder, idx) => (
-              <AnimateOnScroll key={idx} variant="fade-up" delay={idx * 0.1}>
-                <div className="group">
-                  <div className="relative mb-6 overflow-hidden rounded-3xl aspect-[3/4] shadow-xl liquid-glass">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-5973e2153b62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center group-hover:scale-110 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#14181e] via-[#14181e]/40 to-transparent" />
-                    <div className="absolute bottom-6 left-6 text-white group-hover:-translate-y-2 transition-transform duration-300">
-                      <h3 className="text-2xl font-display font-semibold">{founder.name}</h3>
-                      <p className="text-sm font-bold text-primary uppercase tracking-wider mt-1 font-display">{founder.title}</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-slate-400 leading-relaxed max-w-sm font-display font-light">{founder.desc}</p>
+          <div className="mb-24">
+            <AnimateOnScroll variant="fade-up">
+              <div className="relative">
+                <img
+                  src="/images/WHO WE ARE.jpg"
+                  alt="Squadra Tech team — Tarush, Anu, Sandesh and the full team"
+                  className="w-full h-auto object-contain"
+                  style={{
+                    maskImage: "radial-gradient(ellipse 90% 85% at center, black 55%, transparent 100%)",
+                    WebkitMaskImage: "radial-gradient(ellipse 90% 85% at center, black 55%, transparent 100%)",
+                  }}
+                />
+                <div className="text-center mt-6">
+                  <h3 className="text-2xl md:text-3xl font-display font-semibold text-white mb-2">
+                    Anu, Tarush &amp; Sandesh
+                  </h3>
+                  <p className="text-sm text-slate-400 font-display font-light max-w-xl mx-auto">
+                    Co-Founders of Squadra Media — leading a team of 100+ designers, developers, strategists, and engineers based in Bangalore, building for brands across India and the UAE for over five years.
+                  </p>
                 </div>
-              </AnimateOnScroll>
-            ))}
+              </div>
+            </AnimateOnScroll>
           </div>
 
           <AnimateOnScroll variant="scale-up">
