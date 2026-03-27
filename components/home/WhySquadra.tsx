@@ -5,7 +5,7 @@ const ICONS = ["bolt", "verified_user", "groups", "trending_up"];
 
 export default function WhySquadra() {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-16 md:py-16 relative overflow-hidden">
       {/* Shared background — fades out at top, fades out at bottom */}
       <div className="absolute inset-0 bg-slate-900/30">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-indigo-500/10" />

@@ -150,7 +150,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Final CTA — wave background */}
-      <section className="py-14 md:py-16 relative overflow-hidden">
+      <section className="py-14 md:py-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/30">
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-primary/10" />
 
@@ -169,10 +169,9 @@ export default function CaseStudiesPage() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll variant="scale-up">
-            <div className="p-12 lg:p-20 relative overflow-hidden">
-              <div className="absolute top-0 left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight font-display">Ready to build something amazing?</h2>
-              <p className="text-xl text-white/70 mb-10 font-display font-light">Let&apos;s talk about your next project and how we can achieve these results.</p>
+            <div className="p-10 lg:p-10 relative overflow-hidden">
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight font-display font-semibold">Ready to build something amazing?</h2>
+              <p className="text-xl text-white/70 mb-4 font-display font-light">Let&apos;s talk about your next project and how we can achieve these results.</p>
               <Link
                 href="/contact"
                 className="liquid-glass-strong rounded-full px-8 py-4 text-lg font-display font-semibold text-white inline-flex items-center gap-2 group hover:scale-105 transition-all duration-300"

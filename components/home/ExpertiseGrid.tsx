@@ -9,7 +9,7 @@ const EXPERTISE = [
 
 export default function ExpertiseGrid() {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden" id="expertise">
+    <section className="py-16 md:py-16 relative overflow-hidden" id="expertise">
       {/* Same background family — fades out at bottom only */}
       <div className="absolute inset-0 bg-slate-900/30">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-indigo-500/10" />
@@ -41,7 +41,7 @@ export default function ExpertiseGrid() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white tracking-tight leading-[0.9] text-center mb-4">
             Our Expertise
           </h2>
-          <p className="text-base text-slate-300 mb-10 leading-relaxed text-center font-display">
+          <p className="text-md mb-10 leading-relaxed text-center font-display">
             Everything you need to build, launch and grow online
           </p>
         </AnimateOnScroll>
@@ -55,7 +55,7 @@ export default function ExpertiseGrid() {
                   <span className="material-symbols-outlined text-2xl text-primary group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
                 </div>
                 <h5 className="font-bold text-md font-display tracking-tight text-white mb-2">{item.title}</h5>
-                <p className="text-slate-300 text-sm leading-relaxed font-display font-normal">{item.description}</p>
+                <p className="text-slate-300 text-md leading-relaxed font-display font-normal">{item.description}</p>
               </div>
             </AnimateOnScroll>
           ))}

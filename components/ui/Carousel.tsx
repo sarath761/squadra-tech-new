@@ -33,7 +33,7 @@ export default function Carousel({ className = "" }: { className?: string }) {
   return (
     <div className={className}>
       {/* Heading + Arrows — constrained to max-w-7xl */}
-      <div className="max-w-7xl mx-auto px-4 mb-12 flex justify-between items-end">
+      <div className="max-w-7xl mx-auto px-4 mb-8 flex justify-between items-end ">
         <div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white tracking-tight leading-[0.9] text-center mb-4">
             Featured Work

@@ -57,9 +57,9 @@ export default function HowWeDoPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <AnimateOnScroll variant="fade-down">
-                <div className="inline-flex items-center gap-2 text-sm text-slate-400 mb-6 font-medium bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
+                <div className="inline-flex items-center gap-2 text-md text-slate-400 mb-6 font-medium bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
                   <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-                  <span className="material-symbols-outlined text-sm">chevron_right</span>
+                  <span className="material-symbols-outlined text-md">chevron_right</span>
                   <span className="text-white">How We Do</span>
                 </div>
               </AnimateOnScroll>
@@ -87,7 +87,7 @@ export default function HowWeDoPage() {
                     </span>
                     <div className="relative z-10 mt-auto">
                       <p className="text-4xl font-black text-white mb-2 text-gradient">{achievement.metric}</p>
-                      <p className="text-slate-400 font-bold text-sm uppercase tracking-wider font-display">{achievement.label}</p>
+                      <p className="text-slate-400 font-bold text-md uppercase tracking-wider font-display">{achievement.label}</p>
                     </div>
                   </div>
                 </AnimateOnScroll>
@@ -118,7 +118,7 @@ export default function HowWeDoPage() {
           <AnimateOnScroll variant="fade-up">
             <div className="text-center mb-16">
               <div className="flex justify-center mb-4">
-                <span className="liquid-glass rounded-full px-5 py-2 text-sm font-display font-medium text-white/90 tracking-wide">
+                <span className="liquid-glass rounded-full px-5 py-2 text-md font-display font-medium text-white/90 tracking-wide">
                   Methodology
                 </span>
               </div>
@@ -157,9 +157,9 @@ export default function HowWeDoPage() {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <AnimateOnScroll variant="fade-up">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <div className="flex justify-center mb-4">
-                <span className="liquid-glass rounded-full px-5 py-2 text-sm font-display font-medium text-white/90 tracking-wide">
+                <span className="liquid-glass rounded-full px-5 py-2 text-md font-display font-medium text-white/90 tracking-wide">
                   Technology
                 </span>
               </div>
@@ -181,7 +181,7 @@ export default function HowWeDoPage() {
                   </div>
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {stack.tools.map((tool, tIdx) => (
-                      <span key={tIdx} className="px-3 py-1.5 bg-white/[0.06] text-slate-300 rounded-lg text-xs font-bold font-display">
+                      <span key={tIdx} className="px-3 py-1.5 bg-white/[0.06] text-slate-300 rounded-lg text-md font-light font-display">
                         {tool}
                       </span>
                     ))}
@@ -194,7 +194,7 @@ export default function HowWeDoPage() {
       </section>
 
       {/* CTA Section — wave background */}
-      <section className="py-14 md:py-16 relative overflow-hidden">
+      <section className="py-14 md:py-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/30">
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-primary/10" />
 
@@ -214,7 +214,6 @@ export default function HowWeDoPage() {
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <AnimateOnScroll variant="scale-up">
             <div className="p-10 lg:p-10 text-center text-white relative overflow-hidden">
-              <div className="absolute top-0 left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               <h2 className="text-3xl lg:text-5xl text-white mb-6 leading-tight font-display font-semibold">Ready to scale your digital presence?</h2>
               <p className="text-white/70 mb-10 max-w-xl mx-auto text-lg font-display font-light">
                 Let&apos;s discuss how our capabilities can solve your unique business challenges and drive meaningful impact.

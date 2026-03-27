@@ -20,7 +20,7 @@ export default function TrustBar() {
   const duplicated = [...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
   return (
-    <section className="py-16 md:py-20">
+    <section className="py-8 md:py-16">
       <div className="max-w-7xl mx-auto px-4">
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center">
@@ -42,7 +42,7 @@ export default function TrustBar() {
 
       {/* Client Logo Ticker */}
       <div className="w-full overflow-hidden">
-        <h3 className="text-center text-sm font-display font-normal text-white/40 tracking-wide mb-10">
+        <h3 className="text-center text-md font-display font-semibold text-white/40 tracking-wide mb-10">
           Our Trusted Clients
         </h3>
         <div className="w-full max-w-[1164px] mx-auto px-1 flex flex-col gap-0">

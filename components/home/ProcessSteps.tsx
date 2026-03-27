@@ -37,7 +37,7 @@ export default function ProcessSteps() {
   }, []);
 
   return (
-    <section className="py-10 md:py-16 relative overflow-hidden" id="process" style={{ minHeight: "700px" }}>
+    <section className="py-8 md:py-16 relative overflow-hidden" id="process" style={{ minHeight: "700px" }}>
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video

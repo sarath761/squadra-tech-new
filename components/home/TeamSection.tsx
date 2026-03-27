@@ -2,7 +2,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
 export default function TeamSection() {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden" id="team">
+    <section className="py-16 md:py-16 relative overflow-hidden" id="team">
       {/* Background that blends with adjacent sections */}
       <div className="absolute inset-0 bg-slate-900/30">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-indigo-500/10" />

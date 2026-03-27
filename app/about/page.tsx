@@ -55,7 +55,7 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll variant="fade-down" className="mb-6 inline-flex">
-            <div className="flex items-center gap-2 text-sm text-slate-400 font-medium bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
+            <div className="flex items-center gap-2 text-md text-slate-400 font-medium bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="material-symbols-outlined text-sm">chevron_right</span>
               <span className="text-white">About Us</span>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               <AnimateOnScroll key={idx} variant="scale-up" delay={idx * 0.05}>
                 <div className="group liquid-glass rounded-3xl px-8 py-10 hover:bg-white/[0.08] hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-500 flex flex-col items-center gap-4 h-full justify-center">
                   <span className="text-5xl group-hover:scale-110 transition-transform duration-300 drop-shadow-sm">{industry.emoji}</span>
-                  <span className="font-bold text-sm tracking-tight text-white font-display">{industry.name}</span>
+                  <span className="font-bold text-md tracking-tight text-white font-display">{industry.name}</span>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -157,7 +157,7 @@ export default function AboutPage() {
             <AnimateOnScroll variant="fade-right">
               <div className="lg:col-span-1 space-y-6 lg:sticky lg:top-32">
                 <div className="flex mb-4">
-                  <span className="liquid-glass rounded-full px-5 py-2 text-sm font-display font-medium text-white/90 tracking-wide">
+                  <span className="liquid-glass rounded-full px-5 py-2 text-md font-display font-medium text-white/90 tracking-wide">
                     Why Us
                   </span>
                 </div>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                     </span>
                     <div>
                       <h3 className="text-xl font-display font-semibold text-white mb-3">{item.title}</h3>
-                      <p className="text-slate-300 text-sm leading-relaxed font-display font-normal">{item.description}</p>
+                      <p className="text-slate-300 text-md leading-relaxed font-display font-normal">{item.description}</p>
                     </div>
                   </div>
                 </AnimateOnScroll>
@@ -220,9 +220,9 @@ export default function AboutPage() {
 
             <div className="mb-8">
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="px-4 py-2 bg-white/[0.06] text-slate-300 rounded-full text-xs font-bold font-display">Engineering: {TEAM_COMPOSITION.engineering.join(", ")}</span>
-                <span className="px-4 py-2 bg-white/[0.06] text-slate-300 rounded-full text-xs font-bold font-display">Design: {TEAM_COMPOSITION.design.join(", ")}</span>
-                <span className="px-4 py-2 bg-white/[0.06] text-slate-300 rounded-full text-xs font-bold font-display">Leadership: {TEAM_COMPOSITION.leadership.join(", ")}</span>
+                <span className="px-4 py-2 bg-white/[0.06] text-slate-300 rounded-full text-sm font-bold font-display">Engineering: {TEAM_COMPOSITION.engineering.join(", ")}</span>
+                <span className="px-4 py-2 bg-white/[0.06] text-slate-300 rounded-full text-sm font-bold font-display">Design: {TEAM_COMPOSITION.design.join(", ")}</span>
+                <span className="px-4 py-2 bg-white/[0.06] text-slate-300 rounded-full text-sm font-bold font-display">Leadership: {TEAM_COMPOSITION.leadership.join(", ")}</span>
               </div>
             </div>
 
@@ -288,7 +288,7 @@ export default function AboutPage() {
                   <h3 className="text-2xl md:text-3xl font-display font-semibold text-white mb-2">
                     Anu, Tarush &amp; Sandesh
                   </h3>
-                  <p className="text-sm text-slate-400 font-display font-light max-w-xl mx-auto">
+                  <p className="text-md text-slate-400 font-display font-light max-w-xl mx-auto">
                     Co-Founders of Squadra Media — leading a team of 100+ designers, developers, strategists, and engineers based in Bangalore, building for brands across India and the UAE for over five years.
                   </p>
                 </div>

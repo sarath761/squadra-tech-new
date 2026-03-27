@@ -4,7 +4,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
 export default function AISwitch() {
   return (
-    <section className="py-20 md:py-32 text-white overflow-hidden relative">
+    <section className="py-20 md:py-16 text-white overflow-hidden relative">
       {/* Same background family — no top/bottom fades, sits between two matching sections */}
       <div className="absolute inset-0 bg-slate-900/30">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-primary/10" />
@@ -29,10 +29,10 @@ export default function AISwitch() {
 
       <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
         <AnimateOnScroll variant="fade-up">
-          <h2 className="text-5xl lg:text-7xl font-display font-semibold mb-16 leading-tight">
+          <h2 className="text-5xl lg:text-6xl font-display font-semibold mb-16 leading-tight">
             The Enterprises That{" "}
-            <span className="text-primary italic font-serif font-semibold">
-              Switch to AI{" "}
+            <span className="text-primary font-display font-bold">
+              Switch to AI{"  "}
             </span>
             Win
           </h2>
@@ -51,7 +51,7 @@ export default function AISwitch() {
                   )}
                 </div>
                 <div className="text-xl font-bold mb-2 font-display">{stat.title}</div>
-                <p className="text-slate-300 text-sm font-display font-normal">{stat.description}</p>
+                <p className="text-slate-300 text-md font-display font-normal">{stat.description}</p>
               </div>
             </AnimateOnScroll>
           ))}
