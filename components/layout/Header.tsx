@@ -37,7 +37,7 @@ export default function Header() {
             alt="Squadra Tech Logo"
             width={160}
             height={48}
-            className="h-12 w-auto"
+            className="h-20 w-auto"
           />
         </Link>
 

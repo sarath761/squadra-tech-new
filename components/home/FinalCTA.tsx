@@ -30,7 +30,6 @@ export default function FinalCTA() {
       <div className="max-w-5xl mx-auto relative z-10 bg-red-1000">
         <AnimateOnScroll variant="scale-up">
           <div className=" rounded-[2.5rem] p-12 lg:p-10 text-center text-white relative overflow-hidden">
-            <div className="absolute top-0 left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
             <h2 className="text-4xl md:text-4xl lg:text-5xl font-display font-semibold text-white tracking-tight leading-[0.9] text-center mb-4">
               Ready to See Your Website Tomorrow?

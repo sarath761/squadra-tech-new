@@ -3,7 +3,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
 export default function CaseStudyPreview() {
   return (
-    <section className="py-16 md:py-16 overflow-hidden" id="case-studies">
+    <section className="py-16 md:py-8 overflow-hidden" id="case-studies">
       <AnimateOnScroll variant="fade-up">
         <Carousel />
       </AnimateOnScroll>

@@ -15,8 +15,8 @@ export default function HeroSection() {
         {/* Left Column */}
         <div className="lg:col-span-7">
           <AnimateOnScroll variant="fade-down">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold mb-6">
-              <span className="material-symbols-outlined text-sm">bolt</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-white/50 text-white text-md font-bold mb-6">
+              <span className="material-symbols-outlined text-md text-white">bolt</span>
               AI-Powered Web Design Agency
             </div>
           </AnimateOnScroll>

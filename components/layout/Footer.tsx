@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="pt-20 pb-10 border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-6">
@@ -15,10 +15,10 @@ export default function Footer() {
                 alt="Squadra Tech Logo"
                 width={160}
                 height={48}
-                className="h-12 w-auto"
+                className="h-24 w-auto"
               />
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed mb-6">
+            <p className="text-slate-500 text-md leading-relaxed mb-6">
               Your Technology Partner for What&apos;s Next. Based in
               Indiranagar, Bangalore.
             </p>
@@ -45,9 +45,9 @@ export default function Footer() {
           </div>
 
           {/* Industries */}
-          <div>
+          {/* <div>
             <h6 className="font-display mb-6">Industries</h6>
-            <ul className="space-y-3 text-sm text-slate-500">
+            <ul className="space-y-3 text-md text-slate-500">
               <li>
                 <Link
                   className="hover:text-primary transition-colors"
@@ -81,18 +81,18 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Company */}
           <div>
             <h6 className="font-display mb-6">Company</h6>
-            <ul className="space-y-3 text-sm text-slate-500">
+            <ul className="space-y-3 text-md text-slate-500">
               <li>
                 <Link
                   className="hover:text-primary transition-colors"
-                  href="/case-studies"
+                  href="/about"
                 >
-                  Case Studies
+                  About Us
                 </Link>
               </li>
               <li>
@@ -106,9 +106,9 @@ export default function Footer() {
               <li>
                 <Link
                   className="hover:text-primary transition-colors"
-                  href="/about"
+                  href="/case-studies"
                 >
-                  About Us
+                  Case Studies
                 </Link>
               </li>
               <li>
@@ -124,7 +124,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-md text-slate-500 gap-4">
           <p>© {new Date().getFullYear()} Squadra Tech. All rights reserved.</p>
           <div className="flex gap-6">
             <Link className="hover:text-primary transition-colors" href="#">
