@@ -61,7 +61,7 @@ export default function LeadForm({ className = "" }: { className?: string }) {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -94,10 +94,7 @@ export default function LeadForm({ className = "" }: { className?: string }) {
       </div>
       <div>
         <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Current Challenge *</label>
-        <select name="challenge" value={formData.challenge} onChange={handleChange} className="w-full bg-white/5 border border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-400" required>
-          <option value="">What do you need help with?</option>
-          {FORM_OPTIONS.challenges.map(cha => <option key={cha} value={cha}>{cha}</option>)}
-        </select>
+        <textarea name="challenge" value={formData.challenge} onChange={handleChange} className="w-full bg-white/5 border border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none" placeholder="Describe your current challenge..." rows={4} required />
       </div>
       <div>
         <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Website URL <span className="font-normal normal-case">(optional)</span></label>
