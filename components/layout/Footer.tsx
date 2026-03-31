@@ -4,8 +4,8 @@ import { COMPANY_INFO } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="pt-20 pb-10 border-t border-slate-200 dark:border-slate-800">
-      <div className="max-w-7xl mx-auto">
+    <footer className="pt-20 pb-10 border-t border-slate-200 dark:border-slate-800" role="contentinfo">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Top section — Logo + description */}
         <div className="flex flex-col md:flex-row items-start gap-8 mb-16">
           <div className="max-w-xs">
@@ -22,14 +22,14 @@ export default function Footer() {
               Your Technology Partner for What&apos;s Next. Based in Indiranagar, Bangalore.
             </p>
             <div className="flex gap-4">
-              <a className="text-slate-400 hover:text-primary transition-colors" href="#">
-                <span className="material-symbols-outlined">language</span>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Website">
+                <span className="material-symbols-outlined" aria-hidden="true">language</span>
               </a>
-              <a className="text-slate-400 hover:text-primary transition-colors" href="#">
-                <span className="material-symbols-outlined">public</span>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Global presence">
+                <span className="material-symbols-outlined" aria-hidden="true">public</span>
               </a>
-              <a className="text-slate-400 hover:text-primary transition-colors" href={`mailto:${COMPANY_INFO.emailL1}`}>
-                <span className="material-symbols-outlined">mail</span>
+              <a className="text-slate-400 hover:text-primary transition-colors" href={`mailto:${COMPANY_INFO.emailL1}`} aria-label="Send us an email">
+                <span className="material-symbols-outlined" aria-hidden="true">mail</span>
               </a>
             </div>
           </div>
@@ -87,7 +87,6 @@ export default function Footer() {
               <li><Link className="hover:text-primary transition-colors" href="/about">About Us</Link></li>
               <li><Link className="hover:text-primary transition-colors" href="/about">Leadership</Link></li>
               <li><Link className="hover:text-primary transition-colors" href="/case-studies">Clients</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/contact">Careers</Link></li>
               <li><Link className="hover:text-primary transition-colors" href="/contact">Our Location</Link></li>
             </ul>
           </div>

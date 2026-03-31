@@ -42,7 +42,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href || pathname === `${link.href}/`;
             return (
@@ -70,6 +70,7 @@ export default function Header() {
         <button
           className="md:hidden p-2 text-primary relative z-10"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           <span className="material-symbols-outlined text-2xl">
             {mobileMenuOpen ? "close" : "menu"}

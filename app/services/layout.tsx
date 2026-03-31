@@ -1,18 +1,18 @@
-import { metadataContact } from "@/lib/metadata";
+import { metadataServices } from "@/lib/metadata";
 import { siteUrl } from "@/lib/metadata";
 
-export const metadata = metadataContact;
+export const metadata = metadataServices;
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
-    { "@type": "ListItem", position: 2, name: "Contact Us", item: `${siteUrl}/contact/` },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${siteUrl}/services/` },
   ],
 };
 
-export default function ContactLayout({ children }: { children: React.ReactNode }) {
+export default function ServicesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
