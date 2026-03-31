@@ -18,43 +18,49 @@ export default function LeadForm({ className = "" }: { className?: string }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
+
     if (!formData.firstName || !formData.lastName || !formData.company || !formData.phone || !formData.industry || !formData.challenge) {
       toast.error("Please fill in all required fields.");
       return;
     }
-    
-    // Basic phone validation (just checking if it has enough digits)
+
     const phoneRegex = /^[+]?[\d\s-]{7,16}$/;
     if (!phoneRegex.test(formData.phone)) {
       toast.error("Please enter a valid phone number.");
       return;
     }
 
-    if (formData.website && !formData.website.startsWith('http')) {
-       toast.error("Please enter a valid website URL starting with http:// or https://");
-       return;
+    if (formData.website && !formData.website.startsWith("http")) {
+      toast.error("Please enter a valid website URL starting with http:// or https://");
+      return;
     }
 
     setIsSubmitting(true);
     const toastId = toast.loading("Submitting your request...");
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      const data = await res.json();
-      
-      if (res.ok && data.success) {
-        toast.success("Form submitted! We will be in touch within 24 hours.", { id: toastId });
-        setFormData({ firstName: "", lastName: "", company: "", phone: "", industry: "", challenge: "", website: "" });
-      } else {
-        toast.error(data.message || "Failed to submit form.", { id: toastId });
+      const webhookUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL;
+
+      if (!webhookUrl) {
+        toast.error("Form submission is not configured.", { id: toastId });
+        return;
       }
-    } catch (error) {
+
+      await fetch(webhookUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+
+      // Google Apps Script with no-cors doesn't return readable response
+      // so we assume success if no network error was thrown
+      toast.success("Form submitted! We will be in touch within 24 hours.", { id: toastId });
+      setFormData({ firstName: "", lastName: "", company: "", phone: "", industry: "", challenge: "", website: "" });
+    } catch {
       toast.error("An error occurred while submitting. Please try again.", { id: toastId });
     } finally {
       setIsSubmitting(false);
@@ -62,7 +68,7 @@ export default function LeadForm({ className = "" }: { className?: string }) {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
@@ -89,7 +95,7 @@ export default function LeadForm({ className = "" }: { className?: string }) {
         <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Industry *</label>
         <select name="industry" value={formData.industry} onChange={handleChange} className="w-full bg-white/5 border border-slate-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-slate-400" required>
           <option value="">Select your industry</option>
-          {FORM_OPTIONS.industries.map(ind => <option key={ind} value={ind}>{ind}</option>)}
+          {FORM_OPTIONS.industries.map((ind) => <option key={ind} value={ind}>{ind}</option>)}
         </select>
       </div>
       <div>
