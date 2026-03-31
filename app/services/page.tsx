@@ -30,9 +30,9 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden">
       {/* Hero Section — wave background */}
-      <section className="relative overflow-hidden pb-14 md:pt-20 md:pb-16">
+      <section className="relative overflow-hidden py-12 md:py-20 px-6">
         <div className="absolute inset-0 bg-slate-900/30">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-indigo-500/10" />
 
