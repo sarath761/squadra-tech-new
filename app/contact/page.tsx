@@ -144,7 +144,7 @@ export default function ContactPage() {
 
               <AnimateOnScroll variant="scale-up" delay={0.3}>
                 <div className="rounded-3xl overflow-hidden h-64 liquid-glass group relative">
-                  <div className="absolute inset-0 bg-[url('/images/office-main.WebP')] bg-cover bg-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
+                  <div className="absolute inset-0 bg-[url('/images/office-main.webp')] bg-cover bg-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
                   <div className="absolute inset-0 bg-primary/10 mix-blend-overlay pointer-events-none" />
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className="liquid-glass-strong text-white px-5 py-3 rounded-2xl flex items-center gap-2 group-hover:-translate-y-2 transition-transform duration-300">

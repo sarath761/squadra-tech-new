@@ -325,7 +325,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="min-h-[400px] relative">
-                <div className="absolute inset-0 bg-[url('/images/office-main.WebP')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-[url('/images/office-main.webp')] bg-cover bg-center" />
                 <div className="absolute inset-0 bg-primary/20 pointer-events-none mix-blend-overlay" />
               </div>
             </div>
