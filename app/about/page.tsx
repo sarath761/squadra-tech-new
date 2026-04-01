@@ -89,7 +89,7 @@ export default function AboutPage() {
             <AnimateOnScroll variant="fade-left">
               <div className="relative">
                 <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl relative group liquid-glass">
-                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-[url('https://squadramediawebsitev1.s3.us-east-1.amazonaws.com/s3%20squadra/careers/DesktopUI/5.jpg')] bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 liquid-glass-strong p-8 rounded-2xl hidden md:block z-10 hover:-translate-y-2 transition-transform duration-300">
                   <div className="text-white">
@@ -208,12 +208,12 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <AnimateOnScroll variant="fade-right">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative group liquid-glass">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-[url('https://squadramediawebsitev1.s3.us-east-1.amazonaws.com/s3%20squadra/careers/DesktopUI/7.jpg')] bg-cover bg-center group-hover:scale-105 transition-transform duration-1000" />
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll variant="fade-left">
-            <h2 className="text-4xl lg:text-5xl font-display font-semibold text-white tracking-tight leading-[0.9] mb-6">The Engineering Engine.</h2>
+            <h2 className="text-4xl lg:text-5xl font-display font-semibold text-white tracking-tight leading-[0.9] mb-6">The Engineering Engine</h2>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed font-display font-light">
               Our multidisciplinary teams of dedicated engineers, product strategists, and designers bring robust enterprise scale to everything we build.
             </p>
