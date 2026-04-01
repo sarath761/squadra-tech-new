@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.11",
+    "axios": "^1.14.0",
     "framer-motion": "^12.38.0",
     "hls.js": "^1.6.15",
     "next": "16.2.1",
