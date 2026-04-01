@@ -330,7 +330,7 @@ export default function LeadForm({ className = "" }: { className?: string }) {
       <button
         disabled={isSubmitting}
         type="submit"
-        className="w-full flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all"
+        className="w-full flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all cursor-pointer"
       >
         {isSubmitting ? (
           <>
