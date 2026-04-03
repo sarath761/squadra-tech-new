@@ -90,12 +90,11 @@ export const PROCESS_STEPS = [
 ];
 
 export const FAQ_ITEMS = [
-  { question: "What sizes of companies do you work with?", answer: "We primarily partner with mid-market to enterprise companies, though we also work with well-funded startups looking to scale their technology." },
-  { question: "How long does a typical project take?", answer: "Most initial MVP or phase-one projects take between 3 to 4 months from discovery to launch. Complex enterprise systems can span 6+ months." },
-  { question: "Do you offer post-launch support?", answer: "Absolutely. We offer comprehensive SLAs and retainers for ongoing maintenance, Feature enhancements, and SRE monitoring." },
-  { question: "What is your typical tech stack?", answer: "We specialize in Next.js, React, Node.js, Python, AWS, and Azure. However, we are technology agnostic and choose the best tools for the specific business problem." },
-  { question: "How do you handle project security and compliance?", answer: "Security is built-in from day one. We follow OWASP guidelines, conduct regular automated vulnerability testing, and comply with GDPR, HIPAA, and SOC2 depending on client requirements." },
-  { question: "Can you augment our existing engineering team?", answer: "Yes, we offer staff augmentation and co-managed delivery models where our experts seamlessly integrate with your internal teams." },
+  { question: "Is the mockup actually free?", answer: "Yes. Filling in the form and receiving the 48-hour mockup costs you nothing. You only pay once you decide to move forward with us." },
+  { question: "What exactly will I see in 48 hours?", answer: "A high-fidelity Figma design with real screens, your branding and your content. Not a wireframe. An actual visual of what your site will look like." },
+  { question: "How long does the full build take?", answer: "Landing page: 5 to 7 days. Full website: 2 weeks. You will get a clear timeline on the review call with no vague estimates." },
+  { question: "Do you only build websites?", answer: "No. Squadra is a full-stack agency covering branding, marketing, content and photography." },
+  { question: "I am based outside Bangalore. Can you still help?", answer: "Absolutely. We work with clients across India and the UAE, fully remote." },
 ];
 
 export const STATS = [

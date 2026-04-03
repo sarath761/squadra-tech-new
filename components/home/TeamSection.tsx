@@ -51,7 +51,7 @@ export default function TeamSection() {
                   deliver a true end-to-end partner experience.&quot;
                 </p>
                 <p className="font-bold text-xs">
-                  —Anu, Tarush &amp; Sandesh - Co-Founders
+                  — Anu Js - Founder
                 </p>
                 <div className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[12px] border-l-primary" />
               </div>
