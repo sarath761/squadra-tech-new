@@ -40,7 +40,7 @@ const TICKER_ROWS = [
 ];
 
 export default function TrustBar() {
-  const duplicated = [...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS];
+  const duplicated = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
   return (
     <section className="py-8 md:py-16">
@@ -76,7 +76,7 @@ export default function TrustBar() {
               aria-hidden="true"
             >
               <div
-                className={`flex items-center gap-[50px] ${row.direction === "left" ? "animate-ticker-left" : "animate-ticker-right"
+                className={`flex items-center w-max gap-[50px] will-change-transform ${row.direction === "left" ? "animate-ticker-left" : "animate-ticker-right"
                   }`}
                 style={{ animationDuration: `${row.duration}s` }}
               >
@@ -92,7 +92,8 @@ export default function TrustBar() {
                       height={60}
                       className={`w-full h-full object-contain opacity-80 hover:opacity-100 transition-all duration-300 ${logo.white ? "brightness-0 invert" : ""
                         }`}
-                      loading="lazy"
+                      priority={idx < 15}
+                      unoptimized={true}
                     />
                   </div>
                 ))}
