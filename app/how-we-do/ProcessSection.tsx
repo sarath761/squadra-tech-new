@@ -38,7 +38,7 @@ export default function ProcessSection() {
                       <span className="text-sm text-slate-600 dark:text-slate-400 font-bold">{step.number}</span>
                     </div>
                     <div className="md:w-1/2 md:pl-12 order-2 mt-4 md:mt-0 ml-10 md:ml-0 bg-white/5 p-6 rounded-2xl border border-white/10 shadow-sm hover:border-primary/50 transition-all group">
-                      <h4 className="text-primary text-md font-bold tracking-wider uppercase mb-1 drop-shadow-sm font-display">{step.timing}</h4>
+                      <h4 className="text-white text-md font-bold tracking-wider uppercase mb-1 drop-shadow-sm font-display italic">{step.timing}</h4>
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 font-display">{step.title}</h3>
                       <p className="text-slate-600 dark:text-slate-400">{step.description}</p>
                     </div>
@@ -46,7 +46,7 @@ export default function ProcessSection() {
                 ) : (
                   <>
                     <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-4 md:mt-0 ml-10 md:ml-0 bg-white/5 p-6 rounded-2xl border border-white/10 shadow-sm hover:border-primary/50 transition-all group">
-                      <h4 className="text-primary text-md font-bold tracking-wider uppercase mb-1 drop-shadow-sm font-display">{step.timing}</h4>
+                      <h4 className="text-white text-md font-bold tracking-wider uppercase mb-1 drop-shadow-sm font-display italic">{step.timing}</h4>
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 font-display">{step.title}</h3>
                       <p className="text-slate-600 dark:text-slate-400">{step.description}</p>
                     </div>

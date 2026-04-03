@@ -214,7 +214,7 @@ export default function HowWeDoPage() {
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <AnimateOnScroll variant="scale-up">
             <div className="p-10 lg:p-10 text-center text-white relative overflow-hidden">
-              <h2 className="text-3xl lg:text-5xl text-white mb-6 leading-tight font-display font-semibold">Ready to scale your digital presence?</h2>
+              <h2 className="text-3xl lg:text-5xl text-white mb-6 leading-tight font-display font-semibold">Ready to scale your digital infrastructure?</h2>
               <p className="text-white/70 mb-10 max-w-xl mx-auto text-lg font-display font-light">
                 Let&apos;s discuss how our capabilities can solve your unique business challenges and drive meaningful impact.
               </p>
@@ -223,7 +223,7 @@ export default function HowWeDoPage() {
                   href="/contact"
                   className="liquid-glass-strong rounded-full px-8 py-4 text-lg font-display font-semibold text-white hover:scale-105 transition-all duration-300"
                 >
-                  Schedule a Consult
+                  Schedule a Call
                 </Link>
                 <Link
                   href="/case-studies"

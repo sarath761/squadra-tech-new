@@ -36,10 +36,10 @@ export default function Carousel({ className = "" }: { className?: string }) {
       <div className="max-w-7xl mx-auto px-4 mb-8 flex justify-between items-end ">
         <div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white tracking-tight leading-[0.9] text-center mb-4">
-            Featured Work
+            Work That Speaks For Itself
           </h2>
           <p className="text-slate-500 max-w-md">
-            Real results for industry leaders across the globe.
+            Real projects. Real results.
           </p>
         </div>
       </div>

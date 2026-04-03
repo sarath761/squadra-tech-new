@@ -119,9 +119,9 @@ export default function ContactPage() {
                       <h4 className="font-display font-semibold text-xl mb-2 text-white">Email Us</h4>
                       <p className="text-slate-400 leading-relaxed flex flex-col gap-1 font-display font-light">
                         <a href={`mailto:${COMPANY_INFO.emailL1}`} className="hover:text-primary transition-colors">{COMPANY_INFO.emailL1}</a>
-                        {COMPANY_INFO.emailL2 && (
+                        {/* {COMPANY_INFO.emailL2 && (
                           <a href={`mailto:${COMPANY_INFO.emailL2}`} className="hover:text-primary transition-colors">{COMPANY_INFO.emailL2}</a>
-                        )}
+                        )} */}
                       </p>
                     </div>
                   </div>

@@ -8,7 +8,7 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
-    { "@type": "ListItem", position: 2, name: "How We Do", item: `${siteUrl}/how-we-do/` },
+    { "@type": "ListItem", position: 2, name: "Our Process", item: `${siteUrl}/our-process/` },
   ],
 };
 

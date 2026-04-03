@@ -90,14 +90,14 @@ export const metadataCaseStudies: Metadata = {
 };
 
 export const metadataHowWeDo: Metadata = {
-  title: "How We Do | Squadra Tech",
+  title: "Our Process | Squadra Tech",
   description:
     "Discover our 6-step fully transparent process from brief to live site, showcasing how Squadra Tech guarantees project success without surprises.",
   openGraph: {
-    title: "How We Do | Squadra Tech",
+    title: "Our Process | Squadra Tech",
     description:
       "Discover our 6-step fully transparent process from brief to live site, showcasing how Squadra Tech guarantees project success without surprises.",
-    url: "/how-we-do/",
+    url: "/our-process/",
     siteName: "Squadra Tech",
     type: "website",
     images: [ogImage],
@@ -110,7 +110,7 @@ export const metadataHowWeDo: Metadata = {
     images: ["/images/og-image.png"],
   },
   alternates: {
-    canonical: "/how-we-do/",
+    canonical: "/our-process/",
   },
 };
 
