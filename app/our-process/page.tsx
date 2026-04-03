@@ -223,13 +223,13 @@ export default function HowWeDoPage() {
                   href="/contact"
                   className="liquid-glass-strong rounded-full px-8 py-4 text-lg font-display font-semibold text-white hover:scale-105 transition-all duration-300"
                 >
-                  Schedule a Call
+                  Schedule a call
                 </Link>
                 <Link
                   href="/case-studies"
                   className="bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-white/20 px-8 py-4 rounded-full font-display font-semibold text-lg transition-all duration-300"
                 >
-                  View Our Work
+                  View our work
                 </Link>
               </div>
             </div>

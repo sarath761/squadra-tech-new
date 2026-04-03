@@ -140,12 +140,12 @@ export const TEAM_COMPOSITION = {
 };
 
 export const TECH_STACKS = [
-  { category: "Languages & Frameworks", icon: "code", tools: ["TypeScript", "React.js", "Node.js", "Python", "Go", "Next.js"] },
+  { category: "Languages & Frameworks", icon: "code", tools: ["TypeScript", "React.js", "Node.js", "Python", "Go", "Next.js", "Flutter"] },
   { category: "AI & Automation", icon: "smart_toy", tools: ["OpenAI API", "LangChain", "TensorFlow", "UiPath", "Make.com"] },
   { category: "Data & Analytics", icon: "analytics", tools: ["PostgreSQL", "Redis", "Snowflake", "Tableau", "Apache Spark"] },
   { category: "Cloud & DevOps", icon: "cloud", tools: ["AWS", "Google Cloud", "Docker", "Kubernetes", "Terraform"] },
   { category: "Security", icon: "shield", tools: ["OAuth 2.0", "Cloudflare", "SentinelOne", "Vault"] },
-  { category: "Collaboration", icon: "diversity_3", tools: ["Jira", "Slack", "Figma", "GitHub"] },
+  { category: "Collaboration", icon: "diversity_3", tools: ["Jira", "Slack", "Figma", "Bitbucket", "GitHub"] },
 ];
 
 export const ACHIEVEMENTS = [
