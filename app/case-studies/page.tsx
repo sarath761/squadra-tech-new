@@ -97,14 +97,23 @@ export default function CaseStudiesPage() {
           <div className="absolute inset-0 bg-bg-dark/50 z-[1]" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 space-y-24 md:space-y-32 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 space-y-24 md:space-y-10 relative z-10">
           {CASE_STUDIES.map((study, idx) => {
-            const isFullFormat = idx < 3;
             const isEven = idx % 2 !== 0;
-
             return (
               <AnimateOnScroll key={idx} variant={isEven ? "fade-left" : "fade-right"}>
-                <article className={`flex flex-col ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 group`}>
+                <article
+                  className={`flex flex-col ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 group ${study.showWebsite ? "cursor-pointer" : ""}`}
+                  onClick={() => {
+                    if (study.showWebsite && study.link) {
+                      window.open(
+                        study.link.startsWith("http") ? study.link : `https://${study.link}`,
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }
+                  }}
+                >
                   <div className="w-full lg:w-1/2 overflow-hidden rounded-xl aspect-[16/10] relative shadow-2xl liquid-glass">
                     <div className="absolute inset-0 bg-[url('/images/casestudyBg.png')] bg-cover bg-center bg-slate-800" />
                     <div
@@ -118,28 +127,33 @@ export default function CaseStudiesPage() {
                       <span className="px-3 py-1 bg-primary/20 text-primary text-md font-bold rounded-full">
                         {study.category}
                       </span>
-                      <span className="px-3 py-1 bg-white/[0.06] text-slate-400 text-md font-medium rounded-full">
-                        {study.link}
-                      </span>
+                      {/* {study.showWebsite && (
+                        <span className="px-3 py-1 bg-white/[0.06] text-slate-400 text-xs font-medium rounded-full">
+                          {study.link}
+                        </span>
+                      )} */}
                     </div>
 
                     <h2 className="text-3xl font-display font-semibold text-white">{study.title}</h2>
 
                     <div className="space-y-4 text-slate-300 text-lg font-display font-light">
-                      {isFullFormat ? (
-                        <>
-                          <p><strong className="text-white block mb-1 font-display font-semibold">Challenge:</strong> {study.challenge}</p>
-                          <p><strong className="text-white block mb-1 font-display font-semibold">Solution:</strong> {study.solution}</p>
-                          <p><strong className="text-white block mb-1 font-display font-semibold">Impact:</strong> {study.impact}</p>
-                        </>
-                      ) : (
-                        <p>{study.description}</p>
-                      )}
+                      <p><strong className="text-white block mb-1 font-display font-semibold">Challenge:</strong> {study.challenge}</p>
+                      <p><strong className="text-white block mb-1 font-display font-semibold">Solution:</strong> {study.solution}</p>
+                      <p><strong className="text-white block mb-1 font-display font-semibold">Impact:</strong> {study.impact}</p>
                     </div>
 
                     <div className="pt-4 border-t border-white/10">
-                      <div className="text-[#d4af37] text-2xl font-bold font-display">{study.metric}</div>
-                      <p className="text-xs text-slate-500 uppercase font-semibold font-display">{study.metricLabel}</p>
+                      <div className="text-[#d4af37] text-2xl font-bold font-display m-5">{study.metric}
+                        {study.showWebsite && (
+                          <div className="flex items-center gap-2 text-primary text-sm font-display font-semibold group-hover:gap-3 transition-all duration-300 pt-4">
+                            <span>View project</span>
+                            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+                              arrow_forward
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      {/* <p className="text-xs text-slate-500 uppercase font-semibold font-display">{study.metricLabel}</p> */}
                     </div>
                   </div>
                 </article>
