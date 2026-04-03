@@ -131,13 +131,13 @@ export default function ProcessSteps() {
           </div>
         </div>
 
-        <AnimateOnScroll variant="fade-up" delay={0.5}>
+        {/* <AnimateOnScroll variant="fade-up" delay={0.5}>
           <div className="mt-16 text-center">
             <span className="liquid-glass rounded-full px-6 py-2.5 text-sm font-display font-semibold text-white inline-block">
               Client visibility at every stage: Weekly demo · Sprint report · Executive summary · ROI tracker
             </span>
           </div>
-        </AnimateOnScroll>
+        </AnimateOnScroll> */}
       </div>
     </section>
   );
