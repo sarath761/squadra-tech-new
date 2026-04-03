@@ -45,15 +45,6 @@ export default function FinalCTA() {
               >
                 Get My Free Mockup
               </Link>
-
-            </div>
-            <div className="flex items-center justify-center gap-4 mt-10 text-md font-medium text-slate-500 text-center">
-              <span className="material-symbols-outlined text-primary">
-                schedule
-              </span>
-              <p className="text-md text-white/70 max-w-2xl font-display font-light">
-                We take on a limited number of projects each month. Fill in the form to secure your spot.
-              </p>
             </div>
           </div>
         </AnimateOnScroll>

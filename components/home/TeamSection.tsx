@@ -43,19 +43,6 @@ export default function TeamSection() {
                 QA &amp; Security Team
               </span>
             </div>
-
-            <div className="relative max-w-sm">
-              <div className="bg-primary p-5 rounded-2xl text-white shadow-xl relative">
-                <p className="italic mb-2 text-sm leading-relaxed">
-                  &quot;Squadra Tech blends technology with branding and growth to
-                  deliver a true end-to-end partner experience.&quot;
-                </p>
-                <p className="font-bold text-xs">
-                  — Anu Js - Founder
-                </p>
-                <div className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[12px] border-l-primary" />
-              </div>
-            </div>
           </AnimateOnScroll>
         </div>
 
