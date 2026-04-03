@@ -80,7 +80,7 @@ export default function ProcessSteps() {
             From Brief to Live Site
           </h2>
           <p className="text-lg md:text-xl text-white/70 font-display font-light leading-relaxed text-center max-w-2xl mx-auto mb-16">
-            Six steps. Full transparency. No surprises
+            Four steps. No surprises.
           </p>
         </AnimateOnScroll>
 

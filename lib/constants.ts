@@ -81,12 +81,10 @@ export const CASE_STUDIES = [
 ];
 
 export const PROCESS_STEPS = [
-  { number: "01", title: "Discovery & Alignment", timing: "Week 1-2", description: "Stakeholder workshops, system audit, success metrics, delivery plan." },
-  { number: "02", title: "Solution Design", timing: "Week 3-4", description: "Architecture, backlog, roadmap, SLAs, security baseline, proof of concept." },
-  { number: "03", title: "Build & Integrate", timing: "Week 5-10", description: "Agile sprints, code reviews, AI-assisted testing, secure API integrations." },
-  { number: "04", title: "Validate & Harden", timing: "Week 11-12", description: "Automated QA, performance testing, load testing, UAT sign-off, compliance." },
-  { number: "05", title: "Launch & Adoption", timing: "Week 13", description: "Cutover runbook, training, change management, analytics dashboards." },
-  { number: "06", title: "Operate & Improve", timing: "Ongoing", description: "SRE monitoring, incident response, cost optimization, quarterly reviews." },
+  { number: "01", title: "Fill In The Form", timing: "Today", description: "Tell us about your business and what you need. Takes under 2 minutes." },
+  { number: "02", title: "We Build Your Mockup", timing: "Within 48 Hours", description: "Our AI-powered team designs a high-fidelity Figma mockup built specifically for your brand." },
+  { number: "03", title: "We Review Together", timing: "On Your Call", description: "We walk you through every screen, take your feedback and confirm the project scope." },
+  { number: "04", title: "We Build and Launch", timing: "After Confirmation", description: "You approve, we build.Landing page in 5 to 7 days. Full site in 2 to 4 weeks." },
 ];
 
 export const FAQ_ITEMS = [
