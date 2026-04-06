@@ -5,14 +5,14 @@ import Footer from "@/components/layout/Footer";
 import { siteMetadata, siteUrl } from "@/lib/metadata";
 import { COMPANY_INFO } from "@/lib/constants";
 import { Toaster } from "react-hot-toast";
-
-const display = Plus_Jakarta_Sans({ 
+import Script from "next/script";
+const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
 });
 
-const serif = Instrument_Serif({ 
+const serif = Instrument_Serif({
   weight: "400",
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -72,6 +72,21 @@ export default function RootLayout({
         </main>
         <Footer />
         <Toaster position="top-center" toastOptions={{ style: { background: '#1e293b', color: '#fff', border: '1px solid rgba(255,255,255,0.1)' } }} />
+        {process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID && (
+          <Script
+            id="microsoft-clarity"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID}");
+              `,
+            }}
+          />
+        )}
       </body>
     </html>
   );
