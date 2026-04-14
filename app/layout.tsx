@@ -6,6 +6,7 @@ import { siteMetadata, siteUrl } from "@/lib/metadata";
 import { COMPANY_INFO } from "@/lib/constants";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";
+
 const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -54,6 +55,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
     <html lang="en" className={`dark ${display.variable} ${serif.variable}`}>
       <head>
@@ -62,16 +65,42 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        {/* Google Tag Manager — head script */}
+        {gtmId && (
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${gtmId}');
+              `,
+            }}
+          />
+        )}
       </head>
-      {/* We apply bg-bg-dark and text-white in globals.css for body, so we don't strictly need them here, but keeping it explicit is good. */}
-      {/* Selection colors are also in globals.css */}
       <body className="bg-bg-dark text-white font-display antialiased">
+        {/* Google Tag Manager — noscript fallback */}
+        {gtmId && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
         <Header />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
         <Toaster position="top-center" toastOptions={{ style: { background: '#1e293b', color: '#fff', border: '1px solid rgba(255,255,255,0.1)' } }} />
+        {/* Microsoft Clarity */}
         {process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID && (
           <Script
             id="microsoft-clarity"
