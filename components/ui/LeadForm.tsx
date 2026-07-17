@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FORM_OPTIONS } from "@/lib/constants";
 import { toast } from "react-hot-toast";
 import { apiPost, apiFetch, API_ENDPOINTS } from "@/lib/api";
+import { parseEmails } from "@/lib/utils";
 
 export default function LeadForm({ className = "" }: { className?: string }) {
   const [formData, setFormData] = useState({
@@ -74,13 +75,8 @@ export default function LeadForm({ className = "" }: { className?: string }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          to: [process.env.NEXT_PUBLIC_EMAIL_TO],
-          cc: [
-            process.env.NEXT_PUBLIC_EMAIL_CC,
-            process.env.NEXT_PUBLIC_EMAIL_CC_2,
-            process.env.NEXT_PUBLIC_EMAIL_CC_3,
-          ].filter(Boolean),
-          bcc: [process.env.NEXT_PUBLIC_EMAIL_BCC].filter(Boolean),
+          to: parseEmails(process.env.NEXT_PUBLIC_EMAIL_TO),
+          cc: parseEmails(process.env.NEXT_PUBLIC_EMAIL_CC),
           message: {
             subject: "New Lead — Squadra Tech IT Landing Page",
             text: "New contact form submission from Squadra Tech website",
