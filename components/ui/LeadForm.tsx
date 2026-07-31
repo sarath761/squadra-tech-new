@@ -1,10 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { isAxiosError } from "axios";
 import { FORM_OPTIONS } from "@/lib/constants";
 import { toast } from "react-hot-toast";
 import { apiPost, apiFetch, API_ENDPOINTS } from "@/lib/api";
 import { parseEmails } from "@/lib/utils";
+import {
+  trackLeadSubmissionAttempt,
+  trackLeadSubmissionFailed,
+  trackLeadSubmissionSuccess,
+} from "@/lib/tracking";
+
+class ApiResponseError extends Error {}
 
 export default function LeadForm({ className = "" }: { className?: string }) {
   const [formData, setFormData] = useState({
@@ -54,6 +62,7 @@ export default function LeadForm({ className = "" }: { className?: string }) {
 
     setIsSubmitting(true);
     const toastId = toast.loading("Submitting your request...");
+    trackLeadSubmissionAttempt();
 
     try {
       const phone = formData.phone.replace(/\s/g, "");
@@ -70,8 +79,8 @@ export default function LeadForm({ className = "" }: { className?: string }) {
         company: formData.company,
       });
 
-      // 2. Send email notification (fire and forget)
-      apiFetch(API_ENDPOINTS.SEND_EMAIL, {
+      // 2. Send email notification and wait for the API response
+      const emailResponse = await apiFetch(API_ENDPOINTS.SEND_EMAIL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -177,8 +186,13 @@ export default function LeadForm({ className = "" }: { className?: string }) {
             `,
           },
         }),
-      }).catch((err) => console.error("Background email send failed:", err));
+      });
 
+      if (!emailResponse.ok) {
+        throw new ApiResponseError(`Email API returned HTTP ${emailResponse.status}`);
+      }
+
+      trackLeadSubmissionSuccess();
       toast.success("Form submitted! We will be in touch within 24 hours.", { id: toastId });
       setFormData({
         firstName: "",
@@ -190,7 +204,13 @@ export default function LeadForm({ className = "" }: { className?: string }) {
         challenge: "",
         website: "",
       });
-    } catch {
+    } catch (error) {
+      const failureType =
+        error instanceof ApiResponseError || (isAxiosError(error) && error.response)
+          ? "api_error"
+          : "network_error";
+
+      trackLeadSubmissionFailed(failureType);
       toast.error("An error occurred while submitting. Please try again.", { id: toastId });
     } finally {
       setIsSubmitting(false);
